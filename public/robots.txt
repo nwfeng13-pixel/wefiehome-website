@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /
+
+# TESTING ONLY. At launch on wefiehome.com, replace the line above with:
+# Allow: /
