@@ -22,7 +22,7 @@ window.WEFIE_CONFIG = {
     "m-vertica": "",
     "trion-kl": "",
     "arte-cheras": "",
-    "nexus-taman-pertama": "",
+    "nexus-taman-pertama": "https://www.airbnb.com/rooms/1763564414245871262",
     "shah-alam-section-8": ""
   },
 
