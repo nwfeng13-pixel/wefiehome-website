@@ -3,6 +3,7 @@
 {
   "name": "wefiehome-website-01",
   "compatibility_date": "2026-09-01",
+  "workers_dev": true,
   "assets": {
     "directory": "./public",
     "html_handling": "auto-trailing-slash",

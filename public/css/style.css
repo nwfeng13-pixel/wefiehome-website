@@ -5,9 +5,9 @@
   --brand: #a4f4f7;       /* WefieHome brand colour */
   --brand-soft: #e3fbfc;
   --brand-mid: #7fe3e8;
-  --deep: #0e3a41;        /* dark partner colour for text on brand, buttons, footer */
-  --deep-2: #145058;
-  --ink: #132a2e;
+  --deep: #345351;        /* logo dark teal — text on brand, buttons, footer */
+  --deep-2: #2d6662;
+  --ink: #1f2e2d;
   --muted: #4f6569;
   --line: #d8eaec;
   --bg: #ffffff;
@@ -185,3 +185,67 @@ details p { margin: 12px 0 0; color: var(--muted); }
 .wa-float { position: fixed; right: 20px; bottom: 20px; z-index: 60; width: 58px; height: 58px; border-radius: 50%; background: #25d366; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 18px rgba(0, 0, 0, .25); transition: transform .2s; }
 .wa-float:hover { transform: scale(1.07); }
 .wa-float svg { width: 32px; height: 32px; fill: #fff; }
+
+/* ---------- Social media links ---------- */
+.social { display: flex; flex-wrap: wrap; gap: 10px 22px; }
+.social-link { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; text-decoration: none; }
+.social-link svg { width: 24px; height: 24px; flex: none; }
+.site-footer .social-link.fb span { color: #6aa8ff; }
+.site-footer .social-link.ig span { color: #ff6b9a; }
+.site-footer .social-link:hover span { color: var(--white); }
+.social.on-light .social-link.fb span { color: #1877f2; }
+.social.on-light .social-link.ig span { color: #d6249f; }
+.social.on-light { margin-top: 4px; }
+
+/* ---------- Airbnb listing cards ---------- */
+.area { color: var(--deep-2); font-weight: 700; font-size: .8rem; text-transform: uppercase; letter-spacing: .07em; }
+.jump { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 36px; }
+.jump a { background: var(--brand-soft); color: var(--deep); text-decoration: none; font-weight: 700; font-size: .88rem; padding: 7px 14px; border-radius: 999px; }
+.jump a:hover { background: var(--brand); }
+.building-block { padding: 8px 0 44px; margin-bottom: 36px; border-bottom: 1px solid var(--line); scroll-margin-top: 90px; }
+.building-block:last-child { border-bottom: 0; margin-bottom: 0; }
+.building-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 14px; margin-bottom: 20px; }
+.building-head h2 { margin: 4px 0 2px; }
+.building-head p { margin: 0; }
+.listing-grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+.listing { background: var(--white); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); text-decoration: none; color: var(--ink); display: flex; flex-direction: column; transition: transform .15s, box-shadow .15s; }
+.listing:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(14, 58, 65, .14); }
+.listing-img { aspect-ratio: 4 / 3; background: linear-gradient(135deg, var(--brand-soft), var(--brand)); }
+.listing-img img { width: 100%; height: 100%; object-fit: cover; }
+.listing-body { padding: 14px 18px 18px; display: flex; flex-direction: column; gap: 2px; }
+.listing-body strong { color: var(--deep); }
+.listing-body span { color: var(--muted); font-size: .93rem; }
+.listing-body .go { color: var(--deep-2); font-weight: 700; margin-top: 8px; }
+
+/* ---------- Homepage photo hero (slideshow) ---------- */
+.hero-photo { position: relative; min-height: min(88vh, 820px); display: flex; align-items: center; overflow: hidden; background: var(--deep); color: var(--white); }
+.slides { position: absolute; inset: 0; }
+.slide { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; animation: heroFade 18s infinite; }
+.slide:nth-child(1) { animation-delay: 0s; }
+.slide:nth-child(2) { animation-delay: 6s; }
+.slide:nth-child(3) { animation-delay: 12s; }
+@keyframes heroFade {
+  0% { opacity: 0; transform: scale(1.04); }
+  6% { opacity: 1; }
+  33% { opacity: 1; }
+  40% { opacity: 0; transform: scale(1); }
+  100% { opacity: 0; }
+}
+.hero-shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(22, 40, 39, .35) 0%, rgba(22, 40, 39, .55) 55%, rgba(22, 40, 39, .7) 100%); }
+.hero-content { position: relative; text-align: center; padding-top: 80px; padding-bottom: 80px; }
+.hero-content .tagline { color: var(--brand); }
+.hero-content h1 { color: var(--white); max-width: 900px; margin: 14px auto 16px; text-shadow: 0 2px 18px rgba(0, 0, 0, .35); }
+.hero-sub { font-size: 1.2rem; color: rgba(255, 255, 255, .92); max-width: 640px; margin: 0 auto; }
+.hero-btns { justify-content: center; }
+.btn-ghost { border-color: var(--white); color: var(--white); background: rgba(255, 255, 255, .06); }
+.btn-ghost:hover { background: var(--white); color: var(--deep); }
+.intro .routes { margin-top: 26px; }
+@media (prefers-reduced-motion: reduce) {
+  .slide { animation: none; }
+  .slide:first-child { opacity: 1; }
+}
+
+/* ---------- Logo ---------- */
+.logo-img { height: 40px; width: auto; display: block; }
+.site-header .logo { gap: 10px; }
+.site-footer .logo-img { height: 36px; }
