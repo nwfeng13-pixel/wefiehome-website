@@ -52,5 +52,29 @@
     ext(a);
   });
 
+  /* ---------- Tap-to-enlarge images ---------- */
+  document.querySelectorAll("a.zoom").forEach(function (a) {
+    a.addEventListener("click", function (e) {
+      e.preventDefault();
+      var box = document.createElement("div");
+      box.className = "lightbox";
+      box.setAttribute("role", "dialog");
+      box.setAttribute("aria-modal", "true");
+      var img = document.createElement("img");
+      img.src = a.getAttribute("href");
+      var src = a.querySelector("img");
+      img.alt = src ? src.alt : "";
+      var btn = document.createElement("button");
+      btn.type = "button"; btn.setAttribute("aria-label", "Close"); btn.innerHTML = "&times;";
+      box.appendChild(img); box.appendChild(btn);
+      function close() { box.remove(); document.removeEventListener("keydown", onKey); }
+      function onKey(ev) { if (ev.key === "Escape") close(); }
+      box.addEventListener("click", function (ev) { if (ev.target !== img) close(); });
+      document.addEventListener("keydown", onKey);
+      document.body.appendChild(box);
+      btn.focus();
+    });
+  });
+
   document.querySelectorAll("[data-year]").forEach(function (el) { el.textContent = new Date().getFullYear(); });
 })();
