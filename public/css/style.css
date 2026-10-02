@@ -327,6 +327,6 @@ details p { margin: 12px 0 0; color: var(--muted); }
 
 /* ---------- Blurred photo section backgrounds ---------- */
 .photo-bg { position: relative; background: var(--bg) center / cover no-repeat, var(--alt); isolation: isolate; }
-.photo-bg::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(255, 255, 255, .72), rgba(255, 255, 255, .6)); }
+.photo-bg::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(255, 255, 255, .4), rgba(255, 255, 255, .28)); }
 .photo-bg .stat, .photo-bg .card, .photo-bg table { background: rgba(255, 255, 255, .96); }
 .photo-bg .small { color: var(--ink); }
