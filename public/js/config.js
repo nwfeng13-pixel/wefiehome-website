@@ -29,6 +29,7 @@ window.WEFIE_CONFIG = {
   // Pre-filled WhatsApp messages
   messages: {
     owner: "Hi WefieHome, I'd like to request a property assessment for my property.",
-    guest: "Hi WefieHome, I have a question about a stay."
+    guest: "Hi WefieHome, I have a question about a stay.",
+    maximrisen: "Hi WefieHome, I'm a property owner at Maxim Risen and I'm interested in your Airbnb management services. I would like to know more about your management model and arrange a property assessment."
   }
 };

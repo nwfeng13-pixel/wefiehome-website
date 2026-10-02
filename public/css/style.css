@@ -249,3 +249,29 @@ details p { margin: 12px 0 0; color: var(--muted); }
 .logo-img { height: 40px; width: auto; display: block; }
 .site-header .logo { gap: 10px; }
 .site-footer .logo-img { height: 36px; }
+
+/* ---------- Maxim Risen owner-acquisition section ---------- */
+.owner-feature { background: linear-gradient(180deg, var(--white) 0%, var(--brand-soft) 100%); scroll-margin-top: 70px; }
+.mr-panel { display: grid; gap: 36px; grid-template-columns: 1.15fr 1fr; align-items: start; }
+.mr-copy p { color: var(--ink); }
+.mr-points { list-style: none; padding: 0; margin: 22px 0 0; display: grid; gap: 14px; }
+.mr-points li { background: var(--white); border-left: 4px solid var(--brand); border-radius: 10px; padding: 14px 18px; box-shadow: var(--shadow); }
+.mr-points strong { display: block; color: var(--deep); margin-bottom: 2px; }
+.mr-points span { color: var(--muted); font-size: .95rem; }
+.mr-media { margin: 0; position: sticky; top: 90px; }
+.mr-media img { width: 100%; height: auto; border-radius: var(--radius); box-shadow: var(--shadow); }
+.mr-media figcaption { font-size: .82rem; color: var(--muted); margin-top: 8px; }
+.mr-close { margin-top: 40px; background: var(--deep); color: var(--white); border-radius: var(--radius); padding: 30px 32px; }
+.mr-close h3 { color: var(--brand); font-size: 1.4rem; margin-bottom: 8px; }
+.mr-close p { color: rgba(255, 255, 255, .88); margin: 0; }
+.mr-close .btn-primary { background: var(--brand); color: var(--deep); }
+.mr-close .btn-primary:hover { background: var(--brand-mid); }
+.mr-close .btn-outline { border-color: rgba(255, 255, 255, .8); color: var(--white); }
+.mr-close .btn-outline:hover { background: var(--white); color: var(--deep); }
+.mr-faq { margin-top: 40px; max-width: 820px; }
+@media (max-width: 860px) {
+  .mr-panel { grid-template-columns: 1fr; gap: 24px; }
+  .mr-media { position: static; order: -1; }
+  .mr-close { padding: 24px 20px; }
+  .mr-close .btn { width: 100%; text-align: center; }
+}
