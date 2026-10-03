@@ -330,3 +330,135 @@ details p { margin: 12px 0 0; color: var(--muted); }
 .photo-bg::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(255, 255, 255, .4), rgba(255, 255, 255, .28)); }
 .photo-bg .stat, .photo-bg .card, .photo-bg table { background: rgba(255, 255, 255, .96); }
 .photo-bg .small { color: var(--ink); }
+
+/* =====================================================
+   Design review update (Oct 2026)
+   ===================================================== */
+
+/* 1. Photo banners for inner pages */
+.photo-hero { position: relative; color: var(--white); background: linear-gradient(180deg, rgba(22, 40, 39, .55), rgba(22, 40, 39, .72)), var(--hero) center / cover no-repeat, var(--deep); padding: 104px 0 88px; }
+@media (max-width: 760px) { .photo-hero { background-image: linear-gradient(180deg, rgba(22, 40, 39, .55), rgba(22, 40, 39, .75)), var(--hero-sm); padding: 72px 0 60px; } }
+.photo-hero h1, .photo-hero h2 { color: var(--white); text-shadow: 0 2px 16px rgba(0, 0, 0, .3); }
+.photo-hero .lead, .photo-hero p { color: rgba(255, 255, 255, .9); }
+.photo-hero .breadcrumb, .photo-hero .breadcrumb a { color: rgba(255, 255, 255, .85); }
+.photo-hero .tagline { color: var(--brand); }
+.photo-hero .pill { background: rgba(255, 255, 255, .92); }
+.photo-hero .small a { color: var(--brand); }
+.photo-hero .btn-primary { background: var(--brand); color: var(--deep); }
+.photo-hero .btn-primary:hover { background: var(--brand-mid); }
+
+/* Building pages: text + building photo */
+.building-hero { background: var(--deep); color: var(--white); padding: 72px 0; }
+.building-hero h1 { color: var(--white); }
+.building-hero .lead { color: rgba(255, 255, 255, .88); }
+.building-hero .breadcrumb, .building-hero .breadcrumb a { color: rgba(255, 255, 255, .8); }
+.building-hero .btn-primary { background: var(--brand); color: var(--deep); }
+.building-hero-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 44px; align-items: center; }
+.building-photo { margin: 0; }
+.building-photo img { width: 100%; height: auto; max-height: 440px; object-fit: cover; border-radius: var(--radius); box-shadow: 0 14px 40px rgba(0, 0, 0, .3); }
+@media (max-width: 860px) { .building-hero-grid { grid-template-columns: 1fr; gap: 28px; } .building-hero { padding: 48px 0 56px; } .building-photo img { max-height: 320px; } }
+
+/* 2. Stat tiles fit "Superhost" */
+.stats { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+.stat .num { font-size: clamp(1.3rem, 1.7vw, 1.45rem); white-space: nowrap; }
+
+/* 3. FAQ plus / minus */
+summary { list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "+"; flex: none; width: 28px; height: 28px; border-radius: 50%; background: var(--brand-soft); color: var(--deep); font-size: 1.25rem; font-weight: 700; display: flex; align-items: center; justify-content: center; line-height: 1; }
+details[open] summary::after { content: "−"; background: var(--brand); }
+
+/* 4. Equal full-width buttons on phones */
+@media (max-width: 560px) {
+  .btn-row { flex-direction: column; align-items: stretch; }
+  .btn-row .btn { width: 100%; }
+}
+
+/* 5. WhatsApp button + bottom space on phones */
+@media (max-width: 760px) {
+  .wa-float { width: 50px; height: 50px; right: 14px; bottom: 14px; }
+  .wa-float svg { width: 28px; height: 28px; }
+  .site-footer { padding-bottom: 84px; }
+}
+
+/* 6. Footer two columns on phones */
+@media (max-width: 600px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 26px 18px; }
+  .footer-grid > div:first-child, .footer-grid > div:last-child { grid-column: 1 / -1; }
+}
+
+/* 7. Homepage intro: text left, cards right */
+.intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.intro-grid .lead { max-width: none; margin-bottom: 0; }
+.intro-grid .routes { margin-top: 0; grid-template-columns: 1fr; max-width: none; }
+@media (max-width: 860px) { .intro-grid { grid-template-columns: 1fr; gap: 26px; } }
+
+/* 8. Hero subtitle on one line */
+.hero-sub { max-width: 760px; }
+
+/* 10. Management: model line as two ticks */
+.model-line { display: inline-flex; flex-wrap: wrap; gap: 6px 22px; }
+.model-line > span { white-space: nowrap; }
+@media (max-width: 560px) { .model-line { display: flex; flex-direction: column; } .model-line > span { white-space: normal; } }
+
+/* 11. Fee table stacked on phones */
+@media (max-width: 600px) {
+  table, tbody, tr, th, td { display: block; width: 100%; }
+  th { border-bottom: 0; padding: 14px 18px 2px; width: 100%; }
+  td { padding: 0 18px 14px; background: var(--white); }
+  tr { border-bottom: 1px solid var(--line); background: var(--brand-soft); }
+  tr:last-child { border-bottom: 0; }
+}
+
+/* 12. Three-column cards */
+.cols-3 { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 960px) { .cols-3 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .cols-3 { grid-template-columns: 1fr; } }
+
+/* 13. Portfolio cards: details under the name */
+.prop-list a .stack { display: flex; flex-direction: column; gap: 2px; }
+.prop-list a .stack .u, .prop-list a .stack .u2 { font-size: .9rem; text-align: left; white-space: normal; color: var(--muted); }
+.prop-list a .stack .u2 { color: var(--ink); }
+.prop-list a .arrow { color: var(--deep-2); font-weight: 700; }
+
+/* 14/16/17. Stay page */
+.jump { position: sticky; top: 68px; z-index: 20; background: var(--white); padding: 10px 0; margin-top: -10px; }
+.text-link { font-weight: 700; color: var(--deep-2); text-decoration: none; white-space: nowrap; }
+.text-link:hover { text-decoration: underline; }
+@media (max-width: 760px) {
+  .jump { flex-wrap: nowrap; overflow-x: auto; margin-left: -20px; margin-right: -20px; padding: 10px 20px; scrollbar-width: none; box-shadow: 0 6px 12px -10px rgba(0, 0, 0, .2); }
+  .jump::-webkit-scrollbar { display: none; }
+  .jump a { flex: none; }
+  .building-head { align-items: baseline; }
+}
+@media (max-width: 560px) {
+  .listing-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .listing-body { padding: 10px 12px 14px; }
+  .listing-body strong { font-size: .95rem; }
+  .listing-body .rating { font-size: .82rem; }
+  .listing-body .rating .rv { display: block; }
+  .listing-body .fav { margin-left: 0; display: inline-block; margin-top: 4px; }
+  .listing-body .go { font-size: .85rem; margin-top: 6px; }
+}
+
+/* 18. Coming soon text */
+.soon { color: var(--muted); font-style: italic; margin: 0; }
+
+/* 19. About text aligned with other sections */
+.prose > * { max-width: 820px; }
+
+/* 20. Contact cards */
+.contact-cards { margin-top: 24px; }
+.contact-cards .contact-list li:first-child { padding-top: 4px; }
+.contact-cards .contact-list li:last-child { border-bottom: 0; padding-bottom: 0; }
+
+/* Fixes after visual check */
+.photo-hero .model-line, .photo-hero .model-line * { color: var(--deep); }
+.model-line > span > span { padding: 0; color: inherit; }
+.building-photo { display: flex; justify-content: center; }
+.building-photo img { width: auto; max-width: 100%; max-height: 460px; object-fit: contain; }
+@media (max-width: 560px) {
+  .prop-list a .arrow { display: none; }
+  .listing-body .rating .rv { font-size: .8rem; }
+}
+.photo-hero { background-position: center, var(--hero-pos, center); }
