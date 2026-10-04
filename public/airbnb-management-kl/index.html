@@ -19,7 +19,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/motion.css">
   <script>try{document.documentElement.dataset.lang=localStorage.getItem("wefie-lang")||"en"}catch(e){}</script>
+  <script>(function(d){try{if(!matchMedia("(prefers-reduced-motion: reduce)").matches){d.classList.add("motion");setTimeout(function(){if(!window.__motionReady)d.classList.remove("motion")},3000)}}catch(e){}})(document.documentElement)</script>
 </head>
 <body data-audience="owner">
   <header class="site-header">
@@ -48,7 +50,7 @@
           <a class="btn btn-primary" data-wa="owner" data-track="cta-assessment-hero" href="#"><span class="en">Request a Property Assessment</span><span class="zh">申请物业评估</span></a>
           <a class="btn btn-ghost" data-wa="general" data-track="cta-whatsapp-hero" href="#"><span class="en">WhatsApp WefieHome</span><span class="zh">WhatsApp WefieHome</span></a>
         </div>
-        <p class="small" style="margin-top:18px"><span class="en">Own a unit at Maxim Risen? <a href="/#maxim-risen">See Airbnb operator services for Maxim Risen owners →</a></span><span class="zh">您是 Maxim Risen 业主？<a href="/#maxim-risen">查看 Maxim Risen 业主的 Airbnb 运营服务 →</a></span></p>
+        <p class="small" style="margin-top:18px"><span class="en">Own a unit at Maxim Risen? <a href="/#maxim-risen">See Airbnb operator services for Maxim Risen owners <span class="arr" aria-hidden="true">→</span></a></span><span class="zh">您是 Maxim Risen 业主？<a href="/#maxim-risen">查看 Maxim Risen 业主的 Airbnb 运营服务 <span class="arr" aria-hidden="true">→</span></a></span></p>
       </div>
     </section>
 
@@ -189,7 +191,7 @@
           <a href="/stay/nexus-taman-pertama/"><span class="stack"><strong>Nexus Taman Pertama</strong><span class="u"><span class="en">Taman Pertama, Cheras, Kuala Lumpur</span><span class="zh">吉隆坡 蕉赖 Taman Pertama</span></span><span class="u2"><span class="en">1 unit · 3-bedroom</span><span class="zh">1 个单位 · 三房</span></span></span><span class="arrow" aria-hidden="true">→</span></a>
           <a href="/stay/shah-alam-section-8/"><span class="stack"><strong>Shah Alam Section 8</strong><span class="u"><span class="en">Shah Alam, Selangor</span><span class="zh">雪兰莪 莎阿南</span></span><span class="u2"><span class="en">1 unit · 4-bedroom double-storey landed house</span><span class="zh">1 个单位 · 四房双层有地住宅</span></span></span><span class="arrow" aria-hidden="true">→</span></a>
         </div>
-        <p style="margin-top:20px"><a href="/stay/"><span class="en">View all our stays and Airbnb listings →</span><span class="zh">查看全部住宿与 Airbnb 房源 →</span></a></p>
+        <p style="margin-top:20px"><a href="/stay/"><span class="en">View all our stays and Airbnb listings <span class="arr" aria-hidden="true">→</span></span><span class="zh">查看全部住宿与 Airbnb 房源 <span class="arr" aria-hidden="true">→</span></span></a></p>
       </div>
     </section>
 
@@ -263,5 +265,8 @@
 
   <script src="/js/config.js"></script>
   <script src="/js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js" defer></script>
+  <script src="/js/motion.js" defer></script>
 </body>
 </html>

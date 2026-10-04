@@ -19,7 +19,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/motion.css">
   <script>try{document.documentElement.dataset.lang=localStorage.getItem("wefie-lang")||"en"}catch(e){}</script>
+  <script>(function(d){try{if(!matchMedia("(prefers-reduced-motion: reduce)").matches){d.classList.add("motion");setTimeout(function(){if(!window.__motionReady)d.classList.remove("motion")},3000)}}catch(e){}})(document.documentElement)</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "WefieHome", "legalName": "Think Bright PLT", "url": "https://wefiehome.com/", "logo": "https://wefiehome.com/images/wefiehome-logo.png", "email": "contact@wefiehome.com", "telephone": "+60 19-482 4292", "foundingDate": "2018-03", "founder": {"@type": "Person", "name": "Ivan Ng", "jobTitle": "Founder & Managing Director"}, "description": "WefieHome is a short-term rental property management company operating in Kuala Lumpur and Klang Valley.", "areaServed": ["Kuala Lumpur", "Klang Valley"], "address": {"@type": "PostalAddress", "streetAddress": "30-2, Jalan 24/70A, Desa Sri Hartamas", "postalCode": "50480", "addressLocality": "Kuala Lumpur", "addressRegion": "WP Kuala Lumpur", "addressCountry": "MY"}, "sameAs": ["https://www.facebook.com/wefiehome", "https://www.instagram.com/wefiehome", "https://www.airbnb.com/p/ivanng"]}</script>
 </head>
 <body data-audience="owner">
@@ -68,13 +70,13 @@
             <div class="label"><span class="en">For property owners</span><span class="zh">业主</span></div>
             <h3><span class="en">Airbnb &amp; short-term rental management</span><span class="zh">Airbnb 及短租托管</span></h3>
             <p><span class="en">See what we manage, how onboarding works and our management model.</span><span class="zh">了解我们的服务范围、合作流程与管理模式。</span></p>
-            <span class="go"><span class="en">Airbnb Management →</span><span class="zh">了解托管服务 →</span></span>
+            <span class="go"><span class="en">Airbnb Management <span class="arr" aria-hidden="true">→</span></span><span class="zh">了解托管服务 <span class="arr" aria-hidden="true">→</span></span></span>
           </a>
           <a class="route" href="/stay/">
             <div class="label"><span class="en">For guests</span><span class="zh">住客</span></div>
             <h3><span class="en">Find a stay</span><span class="zh">寻找住宿</span></h3>
             <p><span class="en">Clean, comfortable and professionally managed stays in KL and Shah Alam.</span><span class="zh">吉隆坡和莎阿南干净、舒适、专业管理的住宿。</span></p>
-            <span class="go"><span class="en">View our stays →</span><span class="zh">查看住宿 →</span></span>
+            <span class="go"><span class="en">View our stays <span class="arr" aria-hidden="true">→</span></span><span class="zh">查看住宿 <span class="arr" aria-hidden="true">→</span></span></span>
           </a>
         </div>
       </div>
@@ -215,5 +217,8 @@
 
   <script src="/js/config.js"></script>
   <script src="/js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js" defer></script>
+  <script src="/js/motion.js" defer></script>
 </body>
 </html>

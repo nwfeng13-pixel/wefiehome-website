@@ -19,7 +19,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/motion.css">
   <script>try{document.documentElement.dataset.lang=localStorage.getItem("wefie-lang")||"en"}catch(e){}</script>
+  <script>(function(d){try{if(!matchMedia("(prefers-reduced-motion: reduce)").matches){d.classList.add("motion");setTimeout(function(){if(!window.__motionReady)d.classList.remove("motion")},3000)}}catch(e){}})(document.documentElement)</script>
 </head>
 <body data-audience="guest">
   <header class="site-header">
@@ -62,7 +64,7 @@
             <div class="listing-body">
               <strong><span class="en">4-bedroom unit</span><span class="zh">4 房单位</span></strong>
               <span class="rating"><span class="star" aria-hidden="true">★</span> 5.0 <span class="rv">· <span class="en">23 reviews</span><span class="zh">23 条评价</span></span> <em class="fav"><span class="en">Guest favourite</span><span class="zh">房客推荐</span></em></span>
-              <span class="go"><span class="en">View on Airbnb →</span><span class="zh">在 Airbnb 查看 →</span></span>
+              <span class="go"><span class="en">View on Airbnb <span class="arr" aria-hidden="true">→</span></span><span class="zh">在 Airbnb 查看 <span class="arr" aria-hidden="true">→</span></span></span>
             </div>
           </a>
         </div>
@@ -123,7 +125,7 @@
           <a href="/stay/m-vertica/"><strong>M Vertica</strong><span class="u"><span class="en">Kuala Lumpur</span><span class="zh">吉隆坡</span></span></a>
           <a href="/stay/trion-kl/"><strong>Trion KL</strong><span class="u"><span class="en">Kuala Lumpur</span><span class="zh">吉隆坡</span></span></a>
         </div>
-        <p style="margin-top:22px"><a href="/stay/"><span class="en">View all stays →</span><span class="zh">查看全部住宿 →</span></a></p>
+        <p style="margin-top:22px"><a href="/stay/"><span class="en">View all stays <span class="arr" aria-hidden="true">→</span></span><span class="zh">查看全部住宿 <span class="arr" aria-hidden="true">→</span></span></a></p>
       </div>
     </section>
   </main>
@@ -169,5 +171,8 @@
 
   <script src="/js/config.js"></script>
   <script src="/js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js" defer></script>
+  <script src="/js/motion.js" defer></script>
 </body>
 </html>

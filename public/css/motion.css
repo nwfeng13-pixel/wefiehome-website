@@ -1,0 +1,78 @@
+/* =====================================================================
+   WefieHome — Motion design system
+   One set of tokens for every animation on the site.
+   Content is never hidden unless JavaScript has confirmed it can reveal
+   it again (html.motion), and nothing moves for visitors who prefer
+   reduced motion.
+   ===================================================================== */
+:root {
+  --m-fast: 200ms;          /* hover, press */
+  --m-base: 600ms;          /* text + card reveals */
+  --m-slow: 1000ms;         /* image reveals, hero entrance */
+  --m-hero-bg: 8s;          /* hero background settle */
+  --m-ease-out: cubic-bezier(.22, 1, .36, 1);   /* entering: soft settle, no bounce */
+  --m-ease-io: cubic-bezier(.45, 0, .25, 1);    /* hover in/out */
+  --m-rise: 24px;           /* reveal travel distance */
+  --m-stagger: 80ms;        /* gap between items in a group */
+  --m-lift: -4px;           /* card hover lift */
+  --m-zoom: 1.05;           /* image zoom on card hover */
+}
+@media (max-width: 760px) { :root { --m-rise: 16px; } }
+
+/* ---------- Hover: buttons ---------- */
+.btn { transition: background-color var(--m-fast) var(--m-ease-io), color var(--m-fast) var(--m-ease-io), border-color var(--m-fast) var(--m-ease-io), transform var(--m-fast) var(--m-ease-io), box-shadow var(--m-fast) var(--m-ease-io); }
+.btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(22, 40, 39, .16); }
+.btn:active { transform: translateY(0); box-shadow: none; transition-duration: 80ms; }
+.btn-primary::after, .btn-brand::after { content: "→"; display: inline-block; margin-left: .5em; transition: transform var(--m-fast) var(--m-ease-io); }
+.btn-primary:hover::after, .btn-brand:hover::after { transform: translateX(4px); }
+
+/* ---------- Hover: text-link arrows ---------- */
+.arr, .prop-list a .arrow { display: inline-block; transition: transform var(--m-fast) var(--m-ease-io); }
+a:hover .arr, .prop-list a:hover .arrow, .route:hover .arr, .listing:hover .arr { transform: translateX(4px); }
+
+/* ---------- Hover: cards ---------- */
+.listing, .route, .prop-list a, .perf-img { transition: transform var(--m-fast) var(--m-ease-io), box-shadow var(--m-fast) var(--m-ease-io), border-color var(--m-fast) var(--m-ease-io); }
+.listing:hover, .route:hover, .prop-list a:hover { transform: translateY(var(--m-lift)); box-shadow: 0 14px 32px rgba(22, 40, 39, .14); }
+.listing-img { overflow: hidden; }
+.listing-img img { transition: transform var(--m-slow) var(--m-ease-out); }
+.listing:hover .listing-img img { transform: scale(var(--m-zoom)); }
+
+/* ---------- Hero entrance (pure CSS: works even if scripts are slow) ---------- */
+@keyframes m-rise { from { opacity: 0; transform: translate3d(0, var(--m-rise), 0); } to { opacity: 1; transform: none; } }
+html.motion .hero-content > *,
+html.motion .page-hero > .container > *,
+html.motion .building-hero-grid > div > * { animation: m-rise var(--m-slow) var(--m-ease-out) both; }
+html.motion .hero-content > :nth-child(2), html.motion .page-hero > .container > :nth-child(2), html.motion .building-hero-grid > div > :nth-child(2) { animation-delay: calc(var(--m-stagger) * 1.5); }
+html.motion .hero-content > :nth-child(3), html.motion .page-hero > .container > :nth-child(3), html.motion .building-hero-grid > div > :nth-child(3) { animation-delay: calc(var(--m-stagger) * 3); }
+html.motion .hero-content > :nth-child(4), html.motion .page-hero > .container > :nth-child(4), html.motion .building-hero-grid > div > :nth-child(4) { animation-delay: calc(var(--m-stagger) * 4.5); }
+html.motion .hero-content > :nth-child(n+5), html.motion .page-hero > .container > :nth-child(n+5), html.motion .building-hero-grid > div > :nth-child(n+5) { animation-delay: calc(var(--m-stagger) * 6); }
+
+/* Hero background settle: photo banners scale 1.06 → 1 once */
+.photo-hero { background: var(--deep); overflow: hidden; isolation: isolate; }
+.photo-hero::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(22, 40, 39, .55), rgba(22, 40, 39, .72)), var(--hero) center / cover no-repeat; background-position: center, var(--hero-pos, center); }
+@media (max-width: 760px) { .photo-hero::before { background-image: linear-gradient(180deg, rgba(22, 40, 39, .55), rgba(22, 40, 39, .75)), var(--hero-sm); } }
+@keyframes m-settle { from { transform: scale(1.06); } to { transform: scale(1); } }
+html.motion .photo-hero::before { animation: m-settle var(--m-hero-bg) var(--m-ease-out) both; }
+
+/* ---------- Scroll reveal: fade up (JS adds .is-in) ---------- */
+html.motion [data-reveal]:not(.is-in) { opacity: 0; transform: translate3d(0, var(--m-rise), 0); }
+html.motion [data-reveal].rv-run { transition: opacity var(--m-base) var(--m-ease-out), transform var(--m-base) var(--m-ease-out); transition-delay: var(--d, 0ms); }
+
+/* ---------- Scroll reveal: image mask (clip-path wipe, bottom → top) ---------- */
+html.motion [data-reveal-img]:not(.is-in) { clip-path: inset(100% 0 0 0); }
+html.motion [data-reveal-img]:not(.is-in) img { transform: scale(1.08); }
+html.motion [data-reveal-img].rv-run { transition: clip-path var(--m-slow) var(--m-ease-out); transition-delay: var(--d, 0ms); }
+html.motion [data-reveal-img].rv-run img { transition: transform calc(var(--m-slow) * 1.4) var(--m-ease-out); transition-delay: var(--d, 0ms); }
+
+/* ---------- Management process: sequential highlighting ---------- */
+.steps li::before { transition: background-color var(--m-base) var(--m-ease-out), color var(--m-base) var(--m-ease-out), transform var(--m-base) var(--m-ease-out); }
+.steps li h3, .steps li p { transition: opacity var(--m-base) var(--m-ease-out); }
+html.motion .steps[data-steps] li:not(.is-active) h3, html.motion .steps[data-steps] li:not(.is-active) p { opacity: .5; }
+html.motion .steps[data-steps] li.is-active::before { background: var(--deep); color: var(--white); transform: scale(1.08); }
+
+/* ---------- Reduced motion: everything static and visible ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+  .btn:hover, .listing:hover, .route:hover, .prop-list a:hover { transform: none; }
+  .listing:hover .listing-img img { transform: none; }
+}
