@@ -490,3 +490,22 @@ html[data-lang="en"] main p:has(> a:only-child) { text-align: inherit; -webkit-h
   .steps li { padding-left: 50px; }
   .steps li::before { width: 36px; height: 36px; font-size: .95rem; }
 }
+
+/* ---------- Service cards with icons ---------- */
+.svc-card { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.svc-text { flex: 1; min-width: 0; }
+.svc-icon { flex: none; width: 112px; height: 112px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: var(--ic-bg); transition: transform var(--m-fast, .2s) cubic-bezier(.45,0,.25,1); }
+.svc-icon svg { width: 68px; height: 68px; }
+.svc-card:hover .svc-icon { transform: rotate(-6deg) scale(1.04); }
+.tone-teal  { --ic: #2d6662; --ic-2: #1fb5bd; --ic-soft: #c9f7f9; --ic-bg: #e3fbfc; }
+.tone-coral { --ic: #c8553d; --ic-2: #e8795e; --ic-soft: #ffe1d8; --ic-bg: #fff1ec; }
+.tone-amber { --ic: #b07a12; --ic-2: #e3a21a; --ic-soft: #fde9b8; --ic-bg: #fff6e0; }
+.tone-green { --ic: #2f7d4f; --ic-2: #3fae6a; --ic-soft: #cdeedb; --ic-bg: #eaf8ef; }
+@media (max-width: 600px) {
+  .svc-card { position: relative; display: block; }
+  .svc-icon { position: absolute; top: 18px; right: 18px; width: 52px; height: 52px; }
+  .svc-icon svg { width: 34px; height: 34px; }
+  .svc-card h3 { padding-right: 64px; min-height: 40px; display: flex; align-items: center; }
+}
+.svc-icon svg { width: 84px; height: 84px; }
+@media (max-width: 600px) { .svc-icon svg { width: 44px; height: 44px; } }
