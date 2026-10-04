@@ -7,7 +7,7 @@
 (function () {
   window.__motionReady = true;
   var root = document.documentElement;
-  if (!root.classList.contains("motion")) return; // reduced motion or failsafe tripped
+  if (!root.classList.contains("motion")) return; // failsafe tripped
 
   var T = { base: 600, slow: 1000, stagger: 80, start: "top 85%" };
   var hasGSAP = !!(window.gsap && window.ScrollTrigger);

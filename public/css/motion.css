@@ -2,8 +2,7 @@
    WefieHome — Motion design system
    One set of tokens for every animation on the site.
    Content is never hidden unless JavaScript has confirmed it can reveal
-   it again (html.motion), and nothing moves for visitors who prefer
-   reduced motion.
+   it again (html.motion). Animations play for all visitors.
    ===================================================================== */
 :root {
   --m-fast: 200ms;          /* hover, press */
@@ -69,10 +68,3 @@ html.motion [data-reveal-img].rv-run img { transition: transform calc(var(--m-sl
 .steps li h3, .steps li p { transition: opacity var(--m-base) var(--m-ease-out); }
 html.motion .steps[data-steps] li:not(.is-active) h3, html.motion .steps[data-steps] li:not(.is-active) p { opacity: .5; }
 html.motion .steps[data-steps] li.is-active::before { background: var(--deep); color: var(--white); transform: scale(1.08); }
-
-/* ---------- Reduced motion: everything static and visible ---------- */
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
-  .btn:hover, .listing:hover, .route:hover, .prop-list a:hover { transform: none; }
-  .listing:hover .listing-img img { transform: none; }
-}

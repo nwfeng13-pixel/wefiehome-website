@@ -241,10 +241,6 @@ details p { margin: 12px 0 0; color: var(--muted); }
 .btn-ghost { border-color: var(--white); color: var(--white); background: rgba(255, 255, 255, .06); }
 .btn-ghost:hover { background: var(--white); color: var(--deep); }
 .intro .routes { margin-top: 26px; }
-@media (prefers-reduced-motion: reduce) {
-  .slide { animation: none; }
-  .slide:first-child { opacity: 1; }
-}
 
 /* ---------- Logo ---------- */
 .logo-img { height: 40px; width: auto; display: block; }
