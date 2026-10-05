@@ -1,5 +1,4 @@
 User-agent: *
-Disallow: /
+Allow: /
 
-# TESTING ONLY. At launch on wefiehome.com, replace the line above with:
-# Allow: /
+Sitemap: https://wefiehome.com/sitemap.xml

@@ -1,3 +1,2 @@
-/*
-  X-Robots-Tag: noindex
-# TESTING ONLY - delete this file when launching on wefiehome.com
+# Cloudflare custom headers. Search engines and AI tools are allowed to read the site.
+# (The testing-only "noindex" header was removed at launch.)
