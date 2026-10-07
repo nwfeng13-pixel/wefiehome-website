@@ -193,9 +193,11 @@ details p { margin: 12px 0 0; color: var(--muted); }
 .social-link svg { width: 24px; height: 24px; flex: none; }
 .site-footer .social-link.fb span { color: #6aa8ff; }
 .site-footer .social-link.ig span { color: #ff6b9a; }
+.site-footer .social-link.li span { color: #5aa9f0; }
 .site-footer .social-link:hover span { color: var(--white); }
 .social.on-light .social-link.fb span { color: #1877f2; }
 .social.on-light .social-link.ig span { color: #d6249f; }
+.social.on-light .social-link.li span { color: #0a66c2; }
 .social.on-light { margin-top: 4px; }
 
 /* ---------- Airbnb listing cards ---------- */
