@@ -69,7 +69,8 @@ html[data-lang="zh"] .en { display: none !important; }
 .logo { font-weight: 800; font-size: 1.4rem; text-decoration: none; color: var(--deep); letter-spacing: -.02em; display: inline-flex; align-items: center; gap: 8px; }
 .logo-mark { width: 26px; height: 26px; border-radius: 8px; background: var(--brand); display: inline-block; box-shadow: inset 0 0 0 2px var(--deep); }
 .nav-links { display: flex; align-items: center; gap: 24px; }
-.nav-links a { text-decoration: none; color: var(--ink); font-weight: 600; font-size: .95rem; }
+.nav-links a { text-decoration: none; color: var(--ink); font-weight: 600; font-size: .95rem; white-space: nowrap; }
+@media (max-width: 1260px) and (min-width: 1101px) { .nav-links { gap: 18px; } .nav-links a { font-size: .92rem; } }
 .nav-links a:hover, .nav-links a.active { color: var(--deep-2); text-decoration: underline; text-decoration-color: var(--brand-mid); text-decoration-thickness: 3px; text-underline-offset: 6px; }
 .nav-links .btn { padding: 9px 18px; font-size: .9rem; }
 .nav-links a.btn:hover { text-decoration: none; }
@@ -77,7 +78,7 @@ html[data-lang="zh"] .en { display: none !important; }
 .lang-btn:hover { background: var(--deep); color: var(--white); }
 .nav-toggle { display: none; background: none; border: 0; font-size: 1.7rem; cursor: pointer; color: var(--deep); }
 
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
   .nav-toggle { display: block; }
   .nav-links {
     display: none; position: absolute; top: 68px; left: 0; right: 0; flex-direction: column; align-items: flex-start;
@@ -917,3 +918,25 @@ table.mr-compare tbody th { background: var(--alt); }
 .mr-plan-zoom { position: absolute; right: 10px; bottom: 10px; width: 32px; height: 32px; border-radius: 50%; background: var(--deep); color: var(--white); display: grid; place-items: center; font-size: .95rem; }
 .mr-textlink.zoom { cursor: zoom-in; }
 .lightbox img { background: #fff; }
+
+/* ================= Owner Guides hub (/owners/) ================= */
+.og-grid { display: grid; gap: 22px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 360px), 1fr)); align-items: stretch; }
+.og-card { display: flex; flex-direction: column; background: var(--white); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); text-decoration: none; color: inherit; }
+.og-card-img { position: relative; aspect-ratio: 16 / 10; overflow: hidden; background: var(--deep); }
+.og-card-img img { width: 100%; height: 100%; object-fit: cover; object-position: 38% 50%; }
+.og-status { position: absolute; left: 14px; top: 14px; background: var(--brand); color: var(--deep); font-weight: 800; font-size: .78rem; padding: 5px 11px; border-radius: 999px; }
+.og-card-body { padding: 22px 24px 24px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.og-area { font-size: .8rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--deep-2); }
+.og-card h2 { font-size: 1.4rem; margin: 0; }
+.og-card p { color: var(--muted); margin: 0; font-size: .96rem; }
+.og-facts { list-style: none; padding: 0; margin: 4px 0 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.og-facts li { background: var(--brand-soft); color: var(--deep); font-weight: 700; font-size: .8rem; padding: 4px 10px; border-radius: 999px; }
+.og-card .go { margin-top: auto; padding-top: 10px; font-weight: 800; color: var(--deep-2); }
+.og-card .arr { display: inline-block; }
+.og-ask { border: 2px dashed var(--brand-mid); border-radius: 20px; padding: 28px 26px; display: flex; flex-direction: column; gap: 10px; justify-content: center; background: var(--brand-soft); }
+.og-ask h2 { font-size: 1.3rem; margin: 0; }
+.og-ask p { color: var(--ink); margin: 0 0 6px; }
+.og-ask .btn { align-self: flex-start; }
+.og-ask-ic { font-size: 1.8rem; }
+@media (max-width: 760px) { html[data-lang="en"] main .og-card p, html[data-lang="en"] main .og-ask p { text-align: left; } .og-ask .btn { width: 100%; text-align: center; } }
+@media (max-width: 760px) { html[data-lang="en"] main .og-hero .lead, html[data-lang="en"] main .mr-further { text-align: left; } }

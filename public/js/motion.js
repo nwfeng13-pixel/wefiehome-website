@@ -22,7 +22,7 @@
     "main .steps > li", "main .perf-text", "main details", "main .mr-points > li",
     "main .mr-close", "main .jump", "main .building-head", "main .table-wrap", "main .contact-list",
     "main .mr-stage", "main .mr-layout", "main .mr-check > li", "main .mr-pdf", "main .mr-note",
-    "main .mr-work > li", "main .mr-proof-item", "main .mr-stats", "main .mr-assess", "main .owner-card"
+    "main .mr-work > li", "main .mr-proof-item", "main .mr-stats", "main .mr-assess", "main .owner-card", "main .og-card", "main .og-ask"
   ].join(",");
   var IMAGES = "main .mr-media, main .building-photo, main .hiw-media, main .perf-img";
 

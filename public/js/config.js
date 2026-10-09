@@ -31,6 +31,8 @@ window.WEFIE_CONFIG = {
     owner: "Hi WefieHome, I'd like to request a property assessment for my property.",
     guest: "Hi WefieHome, I have a question about a stay.",
     guidereport: "Hi WefieHome, I found something outdated in the KL Travel Guide (wefiehome.com/guide/): ",
+    ownerguide: "Hi WefieHome, I own a unit at a new condo project in Kuala Lumpur and would like to know more about your Airbnb management.",
+    ownerguide_zh: "你好 WefieHome，我在吉隆坡一个新公寓项目拥有单位，想了解你们的 Airbnb 托管服务。",
     // Maxim Risen owner guide (/owners/maxim-risen/) — Build Brief v1.0 §5. Key + "_zh" is used on the 中文 page.
     mr_G1: "Hi WefieHome, I own a unit at Maxim Risen and would like to know more about your Airbnb management.",
     mr_G1_zh: "你好 WefieHome，我是 Maxim Risen 业主，想了解你们的 Airbnb 托管服务。",

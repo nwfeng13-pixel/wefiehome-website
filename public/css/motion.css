@@ -127,3 +127,8 @@ html.motion .mr-hero-fig { animation: m-fade var(--m-slow) var(--m-ease-out) cal
 }
 .mr-plan img { transition: transform var(--m-slow) var(--m-ease-out); }
 .mr-plan:hover img { transform: scale(var(--m-zoom)); }
+.og-card { transition: transform var(--m-fast) var(--m-ease-io), box-shadow var(--m-fast) var(--m-ease-io); }
+.og-card:hover { transform: translateY(var(--m-lift)); box-shadow: var(--m-shadow-hover); }
+.og-card-img img { transition: transform var(--m-slow) var(--m-ease-out); }
+.og-card:hover .og-card-img img { transform: scale(var(--m-zoom)); }
+.og-card:hover .arr { transform: translateX(4px); }

@@ -1,3 +1,2 @@
-# /owners/ hub does not exist yet — send visitors to the management page (Maxim Risen brief §1)
-/owners    /airbnb-management-kl/    302
-/owners/   /airbnb-management-kl/    302
+# Redirect rules for Cloudflare Pages (one per line: /from /to status).
+# /owners/ is now a real page (Owner Guides hub) — no redirect needed.
