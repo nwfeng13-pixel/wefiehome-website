@@ -9,7 +9,8 @@
   var root = document.documentElement;
   if (!root.classList.contains("motion")) return; // failsafe tripped
 
-  var T = { base: 600, slow: 1000, stagger: 80, start: "top 85%" };
+  var T = { base: 600, slow: 850, stagger: 80, staggerMax: 480, count: 1.2, start: "top 85%" };
+  var reduced = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
   var hasGSAP = !!(window.gsap && window.ScrollTrigger);
   if (hasGSAP) gsap.registerPlugin(ScrollTrigger);
 
@@ -19,13 +20,15 @@
     "main .cta-band h2", "main .cta-band p", "main .cta-band .btn-row",
     "main .card", "main .stat", "main .listing", "main .route", "main .prop-list > a",
     "main .steps > li", "main .perf-text", "main details", "main .mr-points > li",
-    "main .mr-close", "main .jump", "main .building-head", "main .table-wrap", "main .contact-list"
+    "main .mr-close", "main .jump", "main .building-head", "main .table-wrap", "main .contact-list",
+    "main .mr-stage", "main .mr-layout", "main .mr-check > li", "main .mr-pdf", "main .mr-note",
+    "main .mr-work > li", "main .mr-proof-item", "main .mr-stats", "main .mr-assess", "main .owner-card"
   ].join(",");
   var IMAGES = "main .mr-media, main .building-photo, main .hiw-media, main .perf-img";
 
   var fades = [].slice.call(document.querySelectorAll(FADE)).filter(function (el) {
     // skip nested matches (e.g. a .card inside a .card) — the parent reveals it
-    return !el.parentElement.closest("[data-reveal]") && !el.closest(".page-hero, .hero-photo");
+    return !el.parentElement.closest("[data-reveal]") && !el.closest(".page-hero, .hero-photo, [data-no-reveal]");
   });
   fades.forEach(function (el) { el.setAttribute("data-reveal", ""); });
   var imgs = [].slice.call(document.querySelectorAll(IMAGES));
@@ -54,7 +57,8 @@
 
   function runCount(c) {
     if (c.done) return; c.done = true;
-    var dur = 1.6, from = { v: 0 };
+    var dur = T.count, from = { v: 0 };
+    if (reduced) { c.el.textContent = fmt(c.p.val, c.p); return; }
     if (hasGSAP) {
       gsap.to(from, { v: c.p.val, duration: dur, ease: "power2.out", onUpdate: function () { c.el.textContent = fmt(from.v, c.p); } });
     } else {
@@ -73,13 +77,14 @@
   /* ---------- 3. Reveal (batched → staggered) ---------- */
   function reveal(batch) {
     batch.forEach(function (el, i) {
-      el.style.setProperty("--d", (i * T.stagger) + "ms");
+      var d = Math.min(i * T.stagger, T.staggerMax);
+      el.style.setProperty("--d", d + "ms");
       el.classList.add("rv-run");
       // force style flush so the transition runs from the hidden state
       void el.offsetWidth;
       el.classList.add("is-in");
       countersWithin(el);
-      var total = (el.hasAttribute("data-reveal-img") ? T.slow * 1.4 : T.base) + i * T.stagger + 50;
+      var total = (el.hasAttribute("data-reveal-img") ? T.slow * 1.4 : T.base) + d + 50;
       setTimeout(function () { el.classList.remove("rv-run"); el.style.removeProperty("--d"); }, total);
     });
   }
@@ -108,6 +113,7 @@
   [].slice.call(document.querySelectorAll("main .steps")).forEach(function (list) {
     list.setAttribute("data-steps", "");
     var items = [].slice.call(list.children);
+    if (reduced) { items.forEach(function (li) { li.classList.add("is-active"); }); return; }
     if (hasGSAP) {
       items.forEach(function (li) {
         ScrollTrigger.create({

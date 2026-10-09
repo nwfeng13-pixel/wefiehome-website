@@ -18,6 +18,9 @@ Key facts (re-verified periodically):
 - [Contact](https://wefiehome.com/contact/): WhatsApp, phone, email, office
 - [Kuala Lumpur Travel Guide](https://wefiehome.com/guide/): guest guide — KLIA to the city, getting around, 10 places to visit, where to eat with halal labels (JAKIM-checked), 3–5 day itineraries
 
+## Owner guides
+- [Maxim Risen Owner Guide](https://wefiehome.com/owners/maxim-risen/): guidance for Maxim Risen (Cheras) owners from VP to Airbnb management; WefieHome is independent of the developer.
+
 ## Owner insights
 - [How much does Airbnb management cost in Kuala Lumpur?](https://wefiehome.com/insights/airbnb-management-cost-kuala-lumpur/)
 - [Airbnb vs long-term rental in Kuala Lumpur](https://wefiehome.com/insights/airbnb-vs-long-term-rental-kuala-lumpur/)

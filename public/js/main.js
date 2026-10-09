@@ -36,12 +36,18 @@
 
   /* ---------- Contact links from config.js ---------- */
   function ext(a) { a.target = "_blank"; a.rel = "noopener"; }
-  document.querySelectorAll("[data-wa]").forEach(function (a) {
-    var who = a.dataset.wa || audience;
-    var msg = (C.messages || {})[who] || "";
-    a.href = "https://wa.me/" + C.whatsapp + (msg ? "?text=" + encodeURIComponent(msg) : "");
-    ext(a);
-  });
+  // WhatsApp links: "<key>_zh" message is used when the page is in 中文 (re-applied on language switch)
+  function setWaLinks() {
+    var M = C.messages || {}, zh = root.dataset.lang === "zh";
+    document.querySelectorAll("[data-wa]").forEach(function (a) {
+      var who = a.dataset.wa || audience;
+      var msg = (zh && M[who + "_zh"]) || M[who] || "";
+      a.href = "https://wa.me/" + C.whatsapp + (msg ? "?text=" + encodeURIComponent(msg) : "");
+      ext(a);
+    });
+  }
+  setWaLinks();
+  document.querySelectorAll(".lang-btn").forEach(function (b) { b.addEventListener("click", setWaLinks); });
   document.querySelectorAll("[data-tel]").forEach(function (a) { a.href = "tel:" + C.phone; });
   document.querySelectorAll("[data-email]").forEach(function (a) { a.href = "mailto:" + C.email; });
   document.querySelectorAll("[data-airbnb]").forEach(function (a) { a.href = C.airbnbProfile; ext(a); });

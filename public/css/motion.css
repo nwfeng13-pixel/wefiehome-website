@@ -2,26 +2,33 @@
    WefieHome — Motion design system
    One set of tokens for every animation on the site.
    Content is never hidden unless JavaScript has confirmed it can reveal
-   it again (html.motion). Animations play for all visitors.
+   it again (html.motion). Reduced-motion visitors get no movement (end of file).
+   Reference: WefieHome Motion Design System v2.0.
    ===================================================================== */
 :root {
+  --m-instant: 80ms;        /* press / active */
   --m-fast: 200ms;          /* hover, press */
   --m-base: 600ms;          /* text + card reveals */
-  --m-slow: 1000ms;         /* image reveals, hero entrance */
+  --m-slow: 850ms;          /* image reveals, hero entrance */
   --m-hero-bg: 8s;          /* hero background settle */
   --m-ease-out: cubic-bezier(.22, 1, .36, 1);   /* entering: soft settle, no bounce */
   --m-ease-io: cubic-bezier(.45, 0, .25, 1);    /* hover in/out */
-  --m-rise: 24px;           /* reveal travel distance */
+  --m-ease-in: cubic-bezier(.4, 0, 1, 1);       /* exits / dismiss */
+  --m-rise: 16px;           /* reveal travel distance */
+  --m-rise-lg: 24px;        /* hero text + large blocks */
   --m-stagger: 80ms;        /* gap between items in a group */
+  --m-stagger-max: 480ms;   /* cap for long grids */
   --m-lift: -4px;           /* card hover lift */
-  --m-zoom: 1.05;           /* image zoom on card hover */
+  --m-lift-btn: -2px;       /* button hover lift */
+  --m-zoom: 1.04;           /* image zoom on card hover */
+  --m-shadow-hover: 0 14px 32px rgba(22, 40, 39, .14);
 }
-@media (max-width: 760px) { :root { --m-rise: 16px; } }
+@media (max-width: 760px) { :root { --m-rise: 12px; --m-rise-lg: 16px; } }
 
 /* ---------- Hover: buttons ---------- */
 .btn { transition: background-color var(--m-fast) var(--m-ease-io), color var(--m-fast) var(--m-ease-io), border-color var(--m-fast) var(--m-ease-io), transform var(--m-fast) var(--m-ease-io), box-shadow var(--m-fast) var(--m-ease-io); }
-.btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(22, 40, 39, .16); }
-.btn:active { transform: translateY(0); box-shadow: none; transition-duration: 80ms; }
+.btn:hover { transform: translateY(var(--m-lift-btn)); box-shadow: 0 8px 20px rgba(22, 40, 39, .16); }
+.btn:active { transform: translateY(0); box-shadow: none; transition-duration: var(--m-instant); }
 .btn-primary::after, .btn-brand::after { content: "→"; display: inline-block; margin-left: .5em; transition: transform var(--m-fast) var(--m-ease-io); }
 .btn-primary:hover::after, .btn-brand:hover::after { transform: translateX(4px); }
 
@@ -31,13 +38,13 @@ a:hover .arr, .prop-list a:hover .arrow, .route:hover .arr, .listing:hover .arr 
 
 /* ---------- Hover: cards ---------- */
 .listing, .route, .prop-list a, .perf-img { transition: transform var(--m-fast) var(--m-ease-io), box-shadow var(--m-fast) var(--m-ease-io), border-color var(--m-fast) var(--m-ease-io); }
-.listing:hover, .route:hover, .prop-list a:hover { transform: translateY(var(--m-lift)); box-shadow: 0 14px 32px rgba(22, 40, 39, .14); }
+.listing:hover, .route:hover, .prop-list a:hover { transform: translateY(var(--m-lift)); box-shadow: var(--m-shadow-hover); }
 .listing-img { overflow: hidden; }
 .listing-img img { transition: transform var(--m-slow) var(--m-ease-out); }
 .listing:hover .listing-img img { transform: scale(var(--m-zoom)); }
 
 /* ---------- Hero entrance (pure CSS: works even if scripts are slow) ---------- */
-@keyframes m-rise { from { opacity: 0; transform: translate3d(0, var(--m-rise), 0); } to { opacity: 1; transform: none; } }
+@keyframes m-rise { from { opacity: 0; transform: translate3d(0, var(--m-rise-lg), 0); } to { opacity: 1; transform: none; } }
 html.motion .hero-content > *,
 html.motion .page-hero > .container > *,
 html.motion .building-hero-grid > div > * { animation: m-rise var(--m-slow) var(--m-ease-out) both; }
@@ -66,9 +73,55 @@ html.motion [data-reveal-img].rv-run img { transition: transform calc(var(--m-sl
 /* ---------- Management process: sequential highlighting ---------- */
 .steps li::before { transition: background-color var(--m-base) var(--m-ease-out), color var(--m-base) var(--m-ease-out), transform var(--m-base) var(--m-ease-out); }
 .steps li h3, .steps li p { transition: opacity var(--m-base) var(--m-ease-out); }
-html.motion .steps[data-steps] li:not(.is-active) h3, html.motion .steps[data-steps] li:not(.is-active) p { opacity: .5; }
+html.motion .steps[data-steps] li:not(.is-active) h3, html.motion .steps[data-steps] li:not(.is-active) p { opacity: .65; }
 html.motion .steps[data-steps] li.is-active::before { background: var(--deep); color: var(--white); transform: scale(1.08); }
 
 /* Service icons pop in with their card */
 html.motion [data-reveal]:not(.is-in) .svc-icon { opacity: 0; transform: scale(.7); }
 html.motion [data-reveal].rv-run .svc-icon { transition: opacity var(--m-base) var(--m-ease-out), transform var(--m-base) var(--m-ease-out); transition-delay: calc(var(--d, 0ms) + 150ms); }
+
+/* ---------- Owner landing pages (/owners/…): hero text sequence only (v2.0 §2) ---------- */
+html.motion .mr-hero > .container > * { animation: none; }
+html.motion .mr-hero-copy > * { animation: m-rise var(--m-slow) var(--m-ease-out) both; }
+html.motion .mr-hero-copy > :nth-child(2) { animation-delay: calc(var(--m-stagger) * 1.5); }
+html.motion .mr-hero-copy > :nth-child(3) { animation-delay: calc(var(--m-stagger) * 3); }
+html.motion .mr-hero-copy > :nth-child(4) { animation-delay: calc(var(--m-stagger) * 4.5); }
+html.motion .mr-hero-copy > :nth-child(n+5) { animation-delay: calc(var(--m-stagger) * 6); }
+@keyframes m-fade { from { opacity: 0; } to { opacity: 1; } }
+html.motion .mr-hero-fig { animation: m-fade var(--m-slow) var(--m-ease-out) calc(var(--m-stagger) * 3) both; }
+
+/* Clickable cards on owner pages: one card pattern (§4.3) */
+.mr-proof-item, .owner-card { transition: transform var(--m-fast) var(--m-ease-io), box-shadow var(--m-fast) var(--m-ease-io); }
+.mr-proof-item:hover, .owner-card:hover { transform: translateY(var(--m-lift)); box-shadow: var(--m-shadow-hover); }
+.mr-proof-img img, .owner-card-img img { transition: transform var(--m-slow) var(--m-ease-out); }
+.mr-proof-item:hover .mr-proof-img img, .owner-card:hover .owner-card-img img { transform: scale(var(--m-zoom)); }
+.mr-textcta::after, .owner-card .arr, .mr-further .arr { transition: transform var(--m-fast) var(--m-ease-io); }
+.mr-textcta:hover::after { transform: translateX(4px); }
+.mr-textlink, .mr-textcta { transition: color var(--m-fast) var(--m-ease-io), border-color var(--m-fast) var(--m-ease-io); }
+
+/* WhatsApp float: lift, never scale (§4.14) */
+.wa-float { transition: transform var(--m-fast) var(--m-ease-io), box-shadow var(--m-fast) var(--m-ease-io); }
+.wa-float:hover { transform: translateY(var(--m-lift-btn)); box-shadow: 0 10px 24px rgba(0, 0, 0, .28); }
+
+/* ---------- Focus (site-wide, §4.9) ---------- */
+:where(a, button, summary, .btn):focus-visible { outline: 3px solid var(--brand-mid); outline-offset: 3px; border-radius: 6px; transition: outline-offset var(--m-fast) var(--m-ease-io); }
+.btn:focus-visible { border-radius: 999px; }
+
+/* ---------- Print: show everything (§8.8) ---------- */
+@media print {
+  [data-reveal], [data-reveal-img] { opacity: 1 !important; transform: none !important; clip-path: none !important; }
+  [data-reveal-img] img { transform: none !important; }
+}
+
+/* ---------- Reduced motion (§7) ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  html.motion [data-reveal]:not(.is-in),
+  html.motion [data-reveal-img]:not(.is-in) { opacity: 1; transform: none; clip-path: none; }
+  html.motion [data-reveal-img] img { transform: none; }
+  html.motion .hero-content > *, html.motion .page-hero > .container > *, html.motion .mr-hero-copy > *, html.motion .mr-hero-fig,
+  html.motion .building-hero-grid > div > *, html.motion .photo-hero::before { animation: none; }
+  .slide { animation: none; opacity: 0; }
+  .slide:first-child { opacity: 1; }
+  *, *::before, *::after { transition-duration: 1ms !important; animation-duration: 1ms !important; animation-iteration-count: 1 !important; }
+}
