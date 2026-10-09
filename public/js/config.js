@@ -30,6 +30,7 @@ window.WEFIE_CONFIG = {
   messages: {
     owner: "Hi WefieHome, I'd like to request a property assessment for my property.",
     guest: "Hi WefieHome, I have a question about a stay.",
+    guidereport: "Hi WefieHome, I found something outdated in the KL Travel Guide (wefiehome.com/guide/): ",
     maximrisen: "Hi WefieHome, I'm a property owner at Maxim Risen and I'm interested in your Airbnb management services. I would like to know more about your management model and arrange a property assessment."
   }
 };
