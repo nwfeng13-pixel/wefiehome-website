@@ -88,7 +88,7 @@ html.motion .mr-hero-copy > :nth-child(3) { animation-delay: calc(var(--m-stagge
 html.motion .mr-hero-copy > :nth-child(4) { animation-delay: calc(var(--m-stagger) * 4.5); }
 html.motion .mr-hero-copy > :nth-child(n+5) { animation-delay: calc(var(--m-stagger) * 6); }
 @keyframes m-fade { from { opacity: 0; } to { opacity: 1; } }
-html.motion .mr-hero-fig { animation: m-fade var(--m-slow) var(--m-ease-out) calc(var(--m-stagger) * 3) both; }
+html.motion .mr-hero > .container > .mr-hero-fig { animation: m-fade var(--m-slow) var(--m-ease-out) calc(var(--m-stagger) * 3) both; }
 
 /* Clickable cards on owner pages: one card pattern (§4.3) */
 .mr-proof-item, .owner-card { transition: transform var(--m-fast) var(--m-ease-io), box-shadow var(--m-fast) var(--m-ease-io); }
