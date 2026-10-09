@@ -125,3 +125,5 @@ html.motion .mr-hero-fig { animation: m-fade var(--m-slow) var(--m-ease-out) cal
   .slide:first-child { opacity: 1; }
   *, *::before, *::after { transition-duration: 1ms !important; animation-duration: 1ms !important; animation-iteration-count: 1 !important; }
 }
+.mr-plan img { transition: transform var(--m-slow) var(--m-ease-out); }
+.mr-plan:hover img { transform: scale(var(--m-zoom)); }
