@@ -1,0 +1,15 @@
+# Old website URLs -> new pages (301 = permanent, passes ranking to the new page)
+# First matching rule wins, so specific rules come before the catch-alls.
+
+# Building pages (these carry most of the current Google impressions)
+/portfolio/jdupion        /stay/j-dupion-residence/   301
+/portfolio/jdupion/       /stay/j-dupion-residence/   301
+/portfolio/mvertica       /stay/m-vertica/            301
+/portfolio/mvertica/      /stay/m-vertica/            301
+/portfolio/mvertica2      /stay/m-vertica/            301
+/portfolio/mvertica2/     /stay/m-vertica/            301
+
+# Everything else from the old portfolio and tag pages -> listings page
+/portfolio                /stay/                      301
+/portfolio/*              /stay/                      301
+/tags/*                   /stay/                      301
