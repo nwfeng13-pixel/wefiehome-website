@@ -1,0 +1,47 @@
+{
+  "provider": "WefieHome",
+  "name": "Airbnb / short-term rental management",
+  "url": "https://wefiehome.com/airbnb-management-kl/",
+  "audience": "Property owners in Kuala Lumpur and the Klang Valley",
+  "areaServed": [
+    "Kuala Lumpur",
+    "Klang Valley",
+    "Cheras",
+    "Shah Alam"
+  ],
+  "services": [
+    "Property assessment and setup advice",
+    "Photography",
+    "Airbnb listing creation and optimisation",
+    "Pricing strategy",
+    "Guest communication and screening",
+    "Check-in and check-out coordination",
+    "Cleaning and linen coordination",
+    "Maintenance coordination",
+    "Property inspections",
+    "Damage reporting and claims",
+    "Monthly owner reporting"
+  ],
+  "pricing": {
+    "fee": "20% of defined gross revenue",
+    "upfrontManagementFee": "None",
+    "agreement": "12 months, renews automatically",
+    "payout": "Monthly payout with monthly report",
+    "note": "Exact terms follow the signed management agreement."
+  },
+  "process": [
+    "WhatsApp or call WefieHome",
+    "Property assessment",
+    "Proposal and management agreement",
+    "Setup, photography and listing",
+    "Launch and day-to-day operation",
+    "Monthly report and payout"
+  ],
+  "contact": {
+    "whatsapp": "https://wa.me/60194824292",
+    "phone": "+60 19-482 4292",
+    "email": "contact@wefiehome.com",
+    "page": "https://wefiehome.com/contact/"
+  },
+  "lastModified": "2026-10-11"
+}

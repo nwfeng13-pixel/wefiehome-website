@@ -1,0 +1,73 @@
+{
+  "name": "WefieHome",
+  "legalName": "Think Bright PLT",
+  "registrationNumber": "201604003315",
+  "url": "https://wefiehome.com/",
+  "tagline": "STAY HAPPY",
+  "description": "WefieHome is a short-term rental (Airbnb) management company operating in Kuala Lumpur and the Klang Valley since March 2018. It manages short-stay units for owners and offers professionally managed stays to guests, combining professional management with long-term property care.",
+  "founded": "2018-03",
+  "founder": {
+    "name": "Ivan Ng",
+    "role": "Founder & Managing Director"
+  },
+  "areaServed": [
+    "Kuala Lumpur",
+    "Klang Valley",
+    "Cheras",
+    "Shah Alam"
+  ],
+  "portfolio": {
+    "activeUnits": 18,
+    "properties": [
+      "J Dupion Residence",
+      "M Vertica",
+      "Trion KL",
+      "Arte Cheras",
+      "Nexus Taman Pertama",
+      "Shah Alam Section 8"
+    ],
+    "propertiesManagedSince2018": "20+",
+    "guestsHosted": "5,000+",
+    "nightsHosted": "10,000+",
+    "airbnb": {
+      "status": "Superhost",
+      "rating": "4.85/5",
+      "reviews": "1,000+",
+      "hostProfile": "https://www.airbnb.com/p/ivanng"
+    }
+  },
+  "managementModel": {
+    "fee": "20% of defined gross revenue",
+    "upfrontManagementFee": "None",
+    "agreement": "12 months, renews automatically",
+    "payout": "Monthly payout with monthly report",
+    "note": "Exact terms follow the signed management agreement."
+  },
+  "contact": {
+    "phone": "+60 19-482 4292",
+    "whatsapp": "https://wa.me/60194824292",
+    "email": "contact@wefiehome.com",
+    "page": "https://wefiehome.com/contact/",
+    "office": "30-2, Jalan 24/70A, Desa Sri Hartamas, 50480 Kuala Lumpur, Malaysia (office only, not a rental unit)"
+  },
+  "languages": [
+    "English",
+    "Chinese",
+    "Malay"
+  ],
+  "sameAs": [
+    "https://www.facebook.com/wefiehome",
+    "https://www.instagram.com/wefiehome",
+    "https://www.linkedin.com/company/wefiehome/",
+    "https://www.airbnb.com/p/ivanng"
+  ],
+  "keyPages": {
+    "airbnbManagement": "https://wefiehome.com/airbnb-management-kl/",
+    "stays": "https://wefiehome.com/stay/",
+    "ownerGuides": "https://wefiehome.com/owners/",
+    "ownerInsights": "https://wefiehome.com/insights/",
+    "guestTravelGuide": "https://wefiehome.com/guide/",
+    "about": "https://wefiehome.com/about/"
+  },
+  "lastModified": "2026-10-11"
+}

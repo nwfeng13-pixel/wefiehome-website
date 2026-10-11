@@ -1,0 +1,62 @@
+{
+  "publisher": "WefieHome",
+  "url": "https://wefiehome.com/#faq",
+  "lastModified": "2026-10-11",
+  "language": "en",
+  "owners": [
+    {
+      "question": "How much does WefieHome charge for Airbnb management?",
+      "answer": "WefieHome charges a management fee of 20% of defined gross revenue. Exact terms follow the signed management agreement."
+    },
+    {
+      "question": "Is there an upfront fee?",
+      "answer": "No. There is no upfront management fee — we earn when your unit earns."
+    },
+    {
+      "question": "How long is the management agreement?",
+      "answer": "The management agreement runs for 12 months and renews automatically. Exact terms follow the signed agreement."
+    },
+    {
+      "question": "How and when do owners get paid?",
+      "answer": "Owners receive a monthly payout together with a monthly report showing revenue and costs."
+    },
+    {
+      "question": "What does WefieHome handle?",
+      "answer": "Assessment and setup advice, photography, Airbnb listing creation and optimisation, pricing, guest communication and screening, check-in and check-out, cleaning and linen coordination, maintenance coordination, inspections, damage reporting and claims, and monthly owner reporting."
+    },
+    {
+      "question": "Which areas do you cover?",
+      "answer": "Kuala Lumpur and the Klang Valley, including Cheras and Shah Alam."
+    },
+    {
+      "question": "Who pays for cleaning, utilities, internet and repairs?",
+      "answer": "Operating expenses such as cleaning, utilities, internet and maintenance are discussed and agreed with the owner before the unit goes live. The arrangement depends on the unit and its operating needs, with all costs clearly outlined so you understand your responsibilities and expected expenses upfront."
+    },
+    {
+      "question": "How long from signing until my unit is live on Airbnb?",
+      "answer": "It depends on your unit's readiness, furnishing needs, photography and listing preparation. If your unit is already furnished and ready, it can be relatively quick; units that need more setup or improvements take longer. We coordinate the preparation with you and keep you informed before the listing goes live."
+    },
+    {
+      "question": "Does my unit need furnishing or renovation, and who pays?",
+      "answer": "Not necessarily. We assess your unit's existing condition, furnishing and amenities before recommending any improvements. If more furnishing, renovation or upgrades are needed, we discuss the recommendations and estimated costs with you for approval before proceeding. Any investment and payment arrangements are agreed in advance."
+    },
+    {
+      "question": "Can I block dates or stay in my own unit?",
+      "answer": "Yes, subject to availability and prior coordination. Let us know in advance so we can check existing bookings and arrange the dates. Owner stays are subject to confirmed guest reservations and the agreed management terms."
+    }
+  ],
+  "guests": [
+    {
+      "question": "What are the check-in and check-out times?",
+      "answer": "Check-in is usually from 3pm and check-out is by 12pm. The exact times are shown on your Airbnb booking."
+    },
+    {
+      "question": "How do I book a WefieHome stay?",
+      "answer": "All WefieHome stays are booked on Airbnb. We have units at J Dupion Residence, M Vertica, Trion KL, Arte Cheras and Nexus Taman Pertama in Kuala Lumpur, and a landed house in Shah Alam Section 8."
+    },
+    {
+      "question": "What are the house rules?",
+      "answer": "Smoking is strictly not allowed in our units. Please follow the house rules shown on each Airbnb listing."
+    }
+  ]
+}

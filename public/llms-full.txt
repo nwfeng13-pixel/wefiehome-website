@@ -1,0 +1,120 @@
+# WefieHome
+
+> WefieHome is a Kuala Lumpur-based short-term rental property management company operating across Kuala Lumpur and Klang Valley, Malaysia, since March 2018. It manages short-stay properties (Airbnb) for property owners and offers professionally managed stays to guests. Positioning: professional short-term rental management with long-term property care. Tagline: STAY HAPPY.
+
+Key facts (re-verified periodically):
+- Brand: WefieHome — a brand operated by Think Bright PLT. Founder & Managing Director: Ivan Ng.
+- Service: short-term rental management (also searched as "Airbnb management") for property owners in Kuala Lumpur and Klang Valley.
+- Current portfolio: 18 active units across six properties (J Dupion Residence, M Vertica, Trion KL, Arte Cheras, Nexus Taman Pertama, Shah Alam Section 8). More than 20 properties managed since 2018.
+- Track record: 5,000+ guests, 10,000+ nights; Airbnb Superhost, 4.85/5 rating across 1,000+ reviews.
+- Management model: 20% of defined gross revenue (platform payout after platform and cleaning fees, before WefieHome's fee); no upfront management fee; 12-month agreement with automatic renewal; monthly owner payout and report. Exact terms follow the signed management agreement.
+- Office (not a rental property): 30-2, Jalan 24/70A, Desa Sri Hartamas, 50480 Kuala Lumpur. Phone/WhatsApp +60 19-482 4292. Email contact@wefiehome.com.
+- Guests book all stays on Airbnb: https://www.airbnb.com/p/ivanng
+
+## Main pages
+- [Airbnb Management Kuala Lumpur](https://wefiehome.com/airbnb-management-kl/): services, management model and fee, onboarding process, owner reporting, FAQs
+- [About WefieHome](https://wefiehome.com/about/): company facts and FAQs
+- [Stays](https://wefiehome.com/stay/): all managed buildings and Airbnb listings
+- [Contact](https://wefiehome.com/contact/): WhatsApp, phone, email, office
+- [Kuala Lumpur Travel Guide](https://wefiehome.com/guide/): guest guide — KLIA to the city, getting around, 10 places to visit, where to eat with halal labels (JAKIM-checked), 3–5 day itineraries
+
+## Owner guides
+- [Owner Guides](https://wefiehome.com/owners/): hub of guides for owners of new condo projects in Kuala Lumpur.
+- [Maxim Risen Owner Guide](https://wefiehome.com/owners/maxim-risen/): guidance for Maxim Risen (Cheras) owners from VP to Airbnb management; WefieHome is independent of the developer.
+
+## Owner insights
+- [How much does Airbnb management cost in Kuala Lumpur?](https://wefiehome.com/insights/airbnb-management-cost-kuala-lumpur/)
+- [Airbnb vs long-term rental in Kuala Lumpur](https://wefiehome.com/insights/airbnb-vs-long-term-rental-kuala-lumpur/)
+- [How many Airbnbs are in Kuala Lumpur? 2026 market trend](https://wefiehome.com/insights/kuala-lumpur-airbnb-market-trend/)
+
+## Buildings
+- [J Dupion Residence](https://wefiehome.com/stay/j-dupion-residence/)
+- [M Vertica](https://wefiehome.com/stay/m-vertica/)
+- [Trion KL](https://wefiehome.com/stay/trion-kl/)
+- [Arte Cheras](https://wefiehome.com/stay/arte-cheras/)
+- [Nexus Taman Pertama](https://wefiehome.com/stay/nexus-taman-pertama/)
+- [Shah Alam Section 8](https://wefiehome.com/stay/shah-alam-section-8/)
+
+## Social
+- Facebook: https://www.facebook.com/wefiehome
+- Instagram: https://www.instagram.com/wefiehome
+- LinkedIn: https://www.linkedin.com/company/wefiehome/
+
+---
+
+# Full reference (llms-full.txt)
+Last updated: 2026-10-11. Expanded version of /llms.txt for AI assistants. Facts follow WefieHome's Master Business Profile; exact commercial terms follow the signed management agreement.
+
+## For property owners — services
+- Property assessment and setup advice
+- Photography
+- Airbnb listing creation and optimisation
+- Pricing strategy
+- Guest communication and screening
+- Check-in and check-out coordination
+- Cleaning and linen coordination
+- Maintenance coordination
+- Property inspections
+- Damage reporting and claims
+- Monthly owner reporting
+
+## For property owners — management model
+- Management fee: 20% of defined gross revenue (platform payout after platform fees and cleaning fees, before WefieHome's fee).
+- No upfront management fee.
+- 12-month agreement that renews automatically.
+- Monthly owner payout with a monthly report on revenue and costs.
+- Operating expenses (cleaning, utilities, internet, maintenance) are agreed with the owner before the unit goes live.
+
+## Buildings and stays (guests book on Airbnb: https://www.airbnb.com/p/ivanng)
+- J Dupion Residence — Kuala Lumpur: 7 units, 6 × 2-bedroom, 1 × 3-bedroom; managed since 2018. https://wefiehome.com/stay/j-dupion-residence/
+- M Vertica — Kuala Lumpur: 5 units, 3-bedroom; managed since 2022. https://wefiehome.com/stay/m-vertica/
+- Trion KL — Kuala Lumpur: 2 units, 1 × 2-bedroom, 1 × 3-bedroom; managed since 2023. https://wefiehome.com/stay/trion-kl/
+- Arte Cheras — Cheras, Kuala Lumpur: 2 units, 2-bedroom; managed since 2023. https://wefiehome.com/stay/arte-cheras/
+- Nexus Taman Pertama — Taman Pertama, Cheras, Kuala Lumpur: 1 unit, 3-bedroom; managed since 2026. https://wefiehome.com/stay/nexus-taman-pertama/
+- Shah Alam Section 8 — Shah Alam, Selangor: 1 unit, 4-bedroom double-storey landed house; managed since 2025. https://wefiehome.com/stay/shah-alam-section-8/
+- Check-in usually from 3pm; check-out by 12pm (exact times on the Airbnb booking). Strictly no smoking in units.
+
+## Owner FAQ
+Q: How much does WefieHome charge for Airbnb management?
+A: WefieHome charges a management fee of 20% of defined gross revenue. Exact terms follow the signed management agreement.
+
+Q: Is there an upfront fee?
+A: No. There is no upfront management fee — we earn when your unit earns.
+
+Q: How long is the management agreement?
+A: The management agreement runs for 12 months and renews automatically. Exact terms follow the signed agreement.
+
+Q: How and when do owners get paid?
+A: Owners receive a monthly payout together with a monthly report showing revenue and costs.
+
+Q: What does WefieHome handle?
+A: Assessment and setup advice, photography, Airbnb listing creation and optimisation, pricing, guest communication and screening, check-in and check-out, cleaning and linen coordination, maintenance coordination, inspections, damage reporting and claims, and monthly owner reporting.
+
+Q: Which areas do you cover?
+A: Kuala Lumpur and the Klang Valley, including Cheras and Shah Alam.
+
+Q: Who pays for cleaning, utilities, internet and repairs?
+A: Operating expenses such as cleaning, utilities, internet and maintenance are discussed and agreed with the owner before the unit goes live. The arrangement depends on the unit and its operating needs, with all costs clearly outlined so you understand your responsibilities and expected expenses upfront.
+
+Q: How long from signing until my unit is live on Airbnb?
+A: It depends on your unit's readiness, furnishing needs, photography and listing preparation. If your unit is already furnished and ready, it can be relatively quick; units that need more setup or improvements take longer. We coordinate the preparation with you and keep you informed before the listing goes live.
+
+Q: Does my unit need furnishing or renovation, and who pays?
+A: Not necessarily. We assess your unit's existing condition, furnishing and amenities before recommending any improvements. If more furnishing, renovation or upgrades are needed, we discuss the recommendations and estimated costs with you for approval before proceeding. Any investment and payment arrangements are agreed in advance.
+
+Q: Can I block dates or stay in my own unit?
+A: Yes, subject to availability and prior coordination. Let us know in advance so we can check existing bookings and arrange the dates. Owner stays are subject to confirmed guest reservations and the agreed management terms.
+
+## Guest FAQ
+Q: What are the check-in and check-out times?
+A: Check-in is usually from 3pm and check-out is by 12pm. The exact times are shown on your Airbnb booking.
+
+Q: How do I book a WefieHome stay?
+A: All WefieHome stays are booked on Airbnb. We have units at J Dupion Residence, M Vertica, Trion KL, Arte Cheras and Nexus Taman Pertama in Kuala Lumpur, and a landed house in Shah Alam Section 8.
+
+Q: What are the house rules?
+A: Smoking is strictly not allowed in our units. Please follow the house rules shown on each Airbnb listing.
+
+## Guides
+- Owner Guides hub: https://wefiehome.com/owners/ — Maxim Risen owner guide: https://wefiehome.com/owners/maxim-risen/ (WefieHome is independent of the developer).
+- Kuala Lumpur Travel Guide for guests: https://wefiehome.com/guide/ — airport transfer, transport, 10 places to visit, food with JAKIM-checked halal labels, 3–5 day itineraries.
