@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>WefieHome Owner Insights</title>
+    <link>https://wefiehome.com/insights/</link>
+    <atom:link href="https://wefiehome.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>Guides for property owners in Kuala Lumpur and the Klang Valley on Airbnb management, short-term vs long-term rental and the KL short-term rental market.</description>
+    <language>en</language>
+    <lastBuildDate>Sun, 11 Oct 2026 09:00:00 +0800</lastBuildDate>
+    <item>
+      <title>How Much Does Airbnb Management Cost in Kuala Lumpur?</title>
+      <link>https://wefiehome.com/insights/airbnb-management-cost-kuala-lumpur/</link>
+      <guid isPermaLink="true">https://wefiehome.com/insights/airbnb-management-cost-kuala-lumpur/</guid>
+      <pubDate>Wed, 07 Oct 2026 09:00:00 +0800</pubDate>
+      <dc:creator>Ivan Ng</dc:creator>
+      <description>Airbnb management in KL usually costs 15–25% of revenue. See what the fee covers, what owners still pay, and a worked example of a monthly payout.</description>
+    </item>
+    <item>
+      <title>Airbnb vs Long-Term Rental in Kuala Lumpur: What Property Owners Should Consider</title>
+      <link>https://wefiehome.com/insights/airbnb-vs-long-term-rental-kuala-lumpur/</link>
+      <guid isPermaLink="true">https://wefiehome.com/insights/airbnb-vs-long-term-rental-kuala-lumpur/</guid>
+      <pubDate>Wed, 07 Oct 2026 09:00:00 +0800</pubDate>
+      <dc:creator>Ivan Ng</dc:creator>
+      <description>Comparing Airbnb and long-term rental for a KL condo? See income, costs, risk, building rules and the effort involved, with an illustrative example.</description>
+    </item>
+    <item>
+      <title>How Many Airbnbs Are There in Kuala Lumpur? Market Size and Trend for Owners (2026)</title>
+      <link>https://wefiehome.com/insights/kuala-lumpur-airbnb-market-trend/</link>
+      <guid isPermaLink="true">https://wefiehome.com/insights/kuala-lumpur-airbnb-market-trend/</guid>
+      <pubDate>Wed, 07 Oct 2026 09:00:00 +0800</pubDate>
+      <dc:creator>Ivan Ng</dc:creator>
+      <description>Kuala Lumpur has about 18,500–20,000 active Airbnb listings, up 27–38% in a year. What the growth means for owners, plus the rules to watch in 2026.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,8 +1,14 @@
 {
-  "provider": "WefieHome",
-  "name": "Airbnb / short-term rental management",
+  "name": "WefieHome Airbnb management (short-term rental management)",
+  "description": "Full-service short-term rental (Airbnb) management for unit owners in Kuala Lumpur and the Klang Valley: setup advice, listing, pricing, guest communication, cleaning and maintenance coordination, inspections and monthly reporting.",
   "url": "https://wefiehome.com/airbnb-management-kl/",
-  "audience": "Property owners in Kuala Lumpur and the Klang Valley",
+  "provider": {
+    "name": "WefieHome",
+    "legalName": "Think Bright PLT",
+    "url": "https://wefiehome.com/"
+  },
+  "serviceType": "Short-term rental management",
+  "audience": "Unit owners in Kuala Lumpur and the Klang Valley",
   "areaServed": [
     "Kuala Lumpur",
     "Klang Valley",
@@ -10,21 +16,55 @@
     "Shah Alam"
   ],
   "services": [
-    "Property assessment and setup advice",
-    "Photography",
-    "Airbnb listing creation and optimisation",
-    "Pricing strategy",
-    "Guest communication and screening",
-    "Check-in and check-out coordination",
-    "Cleaning and linen coordination",
-    "Maintenance coordination",
-    "Property inspections",
-    "Damage reporting and claims",
-    "Monthly owner reporting"
+    {
+      "name": "Property assessment and setup advice",
+      "description": "We review the unit and advise on setup, layout and furnishing priorities before launch."
+    },
+    {
+      "name": "Photography",
+      "description": "Professional listing photography arranged before the unit goes live."
+    },
+    {
+      "name": "Airbnb listing creation and optimisation",
+      "description": "Listing copy, photos, amenities and settings created and kept optimised."
+    },
+    {
+      "name": "Pricing strategy",
+      "description": "Nightly rates adjusted for weekdays, weekends, school holidays, events and demand."
+    },
+    {
+      "name": "Guest communication and screening",
+      "description": "Guest enquiries and messages handled; guests screened against house rules."
+    },
+    {
+      "name": "Check-in and check-out coordination",
+      "description": "Check-in instructions and check-out coordinated for every stay."
+    },
+    {
+      "name": "Cleaning and linen coordination",
+      "description": "Cleaning, linen changes and restocking after every stay."
+    },
+    {
+      "name": "Maintenance coordination",
+      "description": "Issues assessed, owner informed, repairs coordinated and completion checked."
+    },
+    {
+      "name": "Property inspections",
+      "description": "Checkout inspections and random supervisor checks."
+    },
+    {
+      "name": "Damage reporting and claims",
+      "description": "Damage documented and reported or claimed through the appropriate channel."
+    },
+    {
+      "name": "Monthly owner reporting",
+      "description": "Monthly report on revenue, costs and owner payout."
+    }
   ],
   "pricing": {
+    "model": "Revenue share",
     "fee": "20% of defined gross revenue",
-    "upfrontManagementFee": "None",
+    "upfrontFee": "None",
     "agreement": "12 months, renews automatically",
     "payout": "Monthly payout with monthly report",
     "note": "Exact terms follow the signed management agreement."
@@ -41,7 +81,7 @@
     "whatsapp": "https://wa.me/60194824292",
     "phone": "+60 19-482 4292",
     "email": "contact@wefiehome.com",
-    "page": "https://wefiehome.com/contact/"
+    "url": "https://wefiehome.com/contact/"
   },
   "lastModified": "2026-10-11"
 }

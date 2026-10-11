@@ -75,7 +75,7 @@ Last updated: 2026-10-11. Expanded version of /llms.txt for AI assistants. Facts
 - Check-in usually from 3pm; check-out by 12pm (exact times on the Airbnb booking). Strictly no smoking in units.
 
 ## Owner FAQ
-Q: How much does WefieHome charge for Airbnb management?
+Q: How much does WefieHome charge to manage my unit?
 A: WefieHome charges a management fee of 20% of defined gross revenue. Exact terms follow the signed management agreement.
 
 Q: Is there an upfront fee?
@@ -88,7 +88,7 @@ Q: How and when do owners get paid?
 A: Owners receive a monthly payout together with a monthly report showing revenue and costs.
 
 Q: What does WefieHome handle?
-A: Assessment and setup advice, photography, Airbnb listing creation and optimisation, pricing, guest communication and screening, check-in and check-out, cleaning and linen coordination, maintenance coordination, inspections, damage reporting and claims, and monthly owner reporting.
+A: Assessment and setup advice, photography, listing creation and optimisation, pricing, guest communication and screening, check-in and check-out, cleaning and linen coordination, maintenance coordination, inspections, damage reporting and claims, and monthly owner reporting.
 
 Q: Which areas do you cover?
 A: Kuala Lumpur and the Klang Valley, including Cheras and Shah Alam.
@@ -96,7 +96,7 @@ A: Kuala Lumpur and the Klang Valley, including Cheras and Shah Alam.
 Q: Who pays for cleaning, utilities, internet and repairs?
 A: Operating expenses such as cleaning, utilities, internet and maintenance are discussed and agreed with the owner before the unit goes live. The arrangement depends on the unit and its operating needs, with all costs clearly outlined so you understand your responsibilities and expected expenses upfront.
 
-Q: How long from signing until my unit is live on Airbnb?
+Q: How long from signing until my unit is live for bookings?
 A: It depends on your unit's readiness, furnishing needs, photography and listing preparation. If your unit is already furnished and ready, it can be relatively quick; units that need more setup or improvements take longer. We coordinate the preparation with you and keep you informed before the listing goes live.
 
 Q: Does my unit need furnishing or renovation, and who pays?
@@ -107,13 +107,13 @@ A: Yes, subject to availability and prior coordination. Let us know in advance s
 
 ## Guest FAQ
 Q: What are the check-in and check-out times?
-A: Check-in is usually from 3pm and check-out is by 12pm. The exact times are shown on your Airbnb booking.
+A: Check-in is usually from 3pm and check-out is by 12pm. The exact times are shown on your booking confirmation.
 
 Q: How do I book a WefieHome stay?
 A: All WefieHome stays are booked on Airbnb. We have units at J Dupion Residence, M Vertica, Trion KL, Arte Cheras and Nexus Taman Pertama in Kuala Lumpur, and a landed house in Shah Alam Section 8.
 
 Q: What are the house rules?
-A: Smoking is strictly not allowed in our units. Please follow the house rules shown on each Airbnb listing.
+A: Smoking is strictly not allowed in our units. Please follow the house rules shown on each listing.
 
 ## Guides
 - Owner Guides hub: https://wefiehome.com/owners/ — Maxim Risen owner guide: https://wefiehome.com/owners/maxim-risen/ (WefieHome is independent of the developer).

@@ -985,3 +985,5 @@ table.mr-compare tbody th { background: var(--alt); }
 /* ---- GEO: freshness line + homepage FAQ groups ---- */
 .page-meta { font-size: .8rem; color: var(--muted); padding: 18px 0; border-top: 1px solid var(--line); background: var(--white); }
 .faq-group { font-size: 1rem; text-transform: uppercase; letter-spacing: .1em; color: var(--deep-2); margin: 26px 0 10px; }
+.page-meta p { margin: 0; }
+.page-meta a.author { color: inherit; text-decoration: none; border-bottom: 1px dotted currentColor; }
