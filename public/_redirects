@@ -1,2 +1,10 @@
-# Redirect rules for Cloudflare Pages (one per line: /from /to status).
-# /owners/ is now a real page (Owner Guides hub) — no redirect needed.
+# Old website URLs -> new pages (301 = permanent redirect)
+/portfolio/jdupion        /stay/j-dupion-residence/   301
+/portfolio/jdupion/       /stay/j-dupion-residence/   301
+/portfolio/mvertica       /stay/m-vertica/            301
+/portfolio/mvertica/      /stay/m-vertica/            301
+/portfolio/mvertica2      /stay/m-vertica/            301
+/portfolio/mvertica2/     /stay/m-vertica/            301
+/portfolio                /stay/                      301
+/portfolio/*              /stay/                      301
+/tags/*                   /stay/                      301
