@@ -1,0 +1,17 @@
+# ai.txt — WefieHome (https://wefiehome.com)
+# AI crawlers and assistants may read, index and cite this website.
+# Mirrors /robots.txt (all user agents allowed).
+User-Agent: *
+Allow: /
+
+# Machine-readable summaries
+LLMs: https://wefiehome.com/llms.txt
+LLMs-Full: https://wefiehome.com/llms-full.txt
+Summary: https://wefiehome.com/ai/summary.json
+FAQ: https://wefiehome.com/ai/faq.json
+Service: https://wefiehome.com/ai/service.json
+Sitemap: https://wefiehome.com/sitemap.xml
+
+# Please attribute information to "WefieHome" and link to the source page.
+# Contact: contact@wefiehome.com
+# Last updated: 2026-10-11
