@@ -1073,3 +1073,19 @@ html[data-lang] main .mr-slogan { text-align: left; }
 }
 @media (min-width: 1101px) { .mr-hero-copy { max-width: 620px; } .mr-h1-line { white-space: nowrap; } }
 .mr-nw { white-space: nowrap; }
+/* Maxim Risen — performance vs market (compact version of the management-page block) */
+.mr-perf { margin-top: 26px; background: var(--brand-soft); border-radius: 20px; padding: 26px 28px 20px; }
+.mr-perf-title { font-size: 1.2rem; font-weight: 800; color: var(--deep); margin: 0 0 16px; }
+.mr-perf-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.mr-perf-card { background: var(--white); border-radius: 16px; padding: 22px 22px 18px; box-shadow: var(--shadow); display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+.mr-perf-card .perf-big { margin: 0; }
+.mr-perf-card .perf-big span { display: block; margin-top: 8px; }
+.mr-perf-src { font-size: .82rem; color: var(--muted); margin: 14px 0 0; line-height: 1.5; }
+@media (max-width: 760px) {
+  .mr-perf { padding: 20px 16px 16px; }
+  .mr-perf-grid { grid-template-columns: 1fr; gap: 12px; }
+  .mr-perf-card .perf-big strong { font-size: 2.6rem; }
+  html[data-lang="en"] main .mr-perf-src, html[data-lang="en"] main .mr-perf-card p { text-align: left; }
+}
+.mr-perf-card .zoom { margin-top: auto; }
+html[data-lang] main .mr-perf-title { text-align: left; }

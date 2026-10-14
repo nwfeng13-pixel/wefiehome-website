@@ -23,7 +23,7 @@
     "main .mr-close", "main .jump", "main .building-head", "main .table-wrap", "main .contact-list",
     "main .mr-stage", "main .mr-layout", "main .mr-check > li", "main .mr-pdf", "main .mr-note",
     "main .mr-proof-item", "main .mr-stats", "main .mr-assess", "main .owner-card", "main .og-card", "main .og-ask", "main .mr-why > li", "main .mr-fit-col", "main .mr-ivan-fig figcaption", "main .mr-stmt-fig figcaption", "main .mr-inshort",
-    "main .mr-work-group", "main .mr-dots"
+    "main .mr-work-group", "main .mr-dots", "main .mr-perf"
   ].join(",");
   var IMAGES = "main .mr-media, main .building-photo, main .hiw-media, main .perf-img, main .mr-ivan-fig picture, main .mr-stmt-fig > a";
 
