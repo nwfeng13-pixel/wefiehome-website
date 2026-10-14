@@ -22,9 +22,10 @@
     "main .steps > li", "main .perf-text", "main details", "main .mr-points > li",
     "main .mr-close", "main .jump", "main .building-head", "main .table-wrap", "main .contact-list",
     "main .mr-stage", "main .mr-layout", "main .mr-check > li", "main .mr-pdf", "main .mr-note",
-    "main .mr-work > li", "main .mr-proof-item", "main .mr-stats", "main .mr-assess", "main .owner-card", "main .og-card", "main .og-ask", "main .mr-why > li", "main .mr-fit-col", "main .mr-ivan-fig", "main .mr-stmt-fig", "main .mr-inshort"
+    "main .mr-proof-item", "main .mr-stats", "main .mr-assess", "main .owner-card", "main .og-card", "main .og-ask", "main .mr-why > li", "main .mr-fit-col", "main .mr-ivan-fig figcaption", "main .mr-stmt-fig figcaption", "main .mr-inshort",
+    "main .mr-work-group", "main .mr-dots"
   ].join(",");
-  var IMAGES = "main .mr-media, main .building-photo, main .hiw-media, main .perf-img";
+  var IMAGES = "main .mr-media, main .building-photo, main .hiw-media, main .perf-img, main .mr-ivan-fig picture, main .mr-stmt-fig > a";
 
   var fades = [].slice.call(document.querySelectorAll(FADE)).filter(function (el) {
     // skip nested matches (e.g. a .card inside a .card) — the parent reveals it
@@ -110,7 +111,7 @@
   });
 
   /* ---------- 4. Management process: sequential highlighting ---------- */
-  [].slice.call(document.querySelectorAll("main .steps")).forEach(function (list) {
+  [].slice.call(document.querySelectorAll("main .steps, main .mr-check")).forEach(function (list) {
     list.setAttribute("data-steps", "");
     var items = [].slice.call(list.children);
     if (reduced) { items.forEach(function (li) { li.classList.add("is-active"); }); return; }

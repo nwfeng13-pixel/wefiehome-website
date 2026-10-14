@@ -3,7 +3,7 @@
    One set of tokens for every animation on the site.
    Content is never hidden unless JavaScript has confirmed it can reveal
    it again (html.motion). Reduced-motion visitors get no movement (end of file).
-   Reference: WefieHome Motion Design System v2.0.
+   Reference: WefieHome Motion Design System v2.1 (flagship owner page allowance).
    ===================================================================== */
 :root {
   --m-instant: 80ms;        /* press / active */
@@ -80,7 +80,7 @@ html.motion .steps[data-steps] li.is-active::before { background: var(--deep); c
 html.motion [data-reveal]:not(.is-in) .svc-icon { opacity: 0; transform: scale(.7); }
 html.motion [data-reveal].rv-run .svc-icon { transition: opacity var(--m-base) var(--m-ease-out), transform var(--m-base) var(--m-ease-out); transition-delay: calc(var(--d, 0ms) + 150ms); }
 
-/* ---------- Owner landing pages (/owners/…): hero text sequence only (v2.0 §2) ---------- */
+/* ---------- Owner landing pages (/owners/…): hero text sequence (v2.0 §2) — flagship extras below (v2.1) ---------- */
 html.motion .mr-hero > .container > * { animation: none; }
 html.motion .mr-hero-copy > * { animation: m-rise var(--m-slow) var(--m-ease-out) both; }
 html.motion .mr-hero-copy > :nth-child(2) { animation-delay: calc(var(--m-stagger) * 1.5); }
@@ -132,3 +132,53 @@ html.motion .mr-hero > .container > .mr-hero-fig { animation: m-fade var(--m-slo
 .og-card-img img { transition: transform var(--m-slow) var(--m-ease-out); }
 .og-card:hover .og-card-img img { transform: scale(var(--m-zoom)); }
 .og-card:hover .arr { transform: translateX(4px); }
+
+/* =====================================================================
+   v2.1 — Flagship owner page (Maxim Risen). Every effect plays once,
+   never loops, never touches fees or delays a button.
+   ===================================================================== */
+/* Hero: highlighter stroke draws behind "Only 12 Owner Partners" */
+@keyframes m-hl { from { background-size: 0% 100%; } to { background-size: 100% 100%; } }
+html.motion .mr-hl { animation: m-hl 900ms var(--m-ease-out) 950ms both; }
+/* Hero: tower visual settles 1.05 → 1 */
+.mr-hero-fig { overflow: hidden; }
+@keyframes m-settle-sm { from { transform: scale(1.05); } to { transform: none; } }
+html.motion .mr-hero-fig img { animation: m-settle-sm var(--m-hero-bg) var(--m-ease-out) both; }
+
+/* Line icons draw themselves when their card reveals */
+html.motion [data-reveal] .mr-draw * { stroke-dasharray: 1; transition: stroke-dashoffset 900ms var(--m-ease-out); transition-delay: calc(var(--d, 0ms) + 200ms); }
+html.motion [data-reveal]:not(.is-in) .mr-draw * { stroke-dashoffset: 1; }
+/* Ticks draw in sequence (good-fit list, workload groups, assessment) */
+html.motion [data-reveal] .mr-tick path { stroke-dasharray: 1; transition: stroke-dashoffset 500ms var(--m-ease-out); transition-delay: calc(var(--d, 0ms) + 250ms + var(--i, 0) * 120ms); }
+html.motion [data-reveal]:not(.is-in) .mr-tick path { stroke-dashoffset: 1; }
+html.motion [data-reveal] .mr-x { transition: opacity var(--m-base) var(--m-ease-out), transform var(--m-base) var(--m-ease-out); transition-delay: calc(var(--d, 0ms) + 250ms + var(--i, 0) * 120ms); }
+html.motion [data-reveal]:not(.is-in) .mr-x { opacity: 0; transform: scale(.4); }
+
+/* Why-12: number badges pop in after their row */
+.mr-why .mr-num { transition: opacity var(--m-base) var(--m-ease-out), transform var(--m-base) var(--m-ease-out); }
+html.motion .mr-why > li.rv-run .mr-num { transition-delay: calc(var(--d, 0ms) + 150ms); }
+html.motion .mr-why > li[data-reveal]:not(.is-in) .mr-num { opacity: 0; transform: scale(.5); }
+
+/* Checklist: steps light up in turn as you scroll (same pattern as .steps) */
+.mr-check .mr-num { transition: background-color var(--m-base) var(--m-ease-out), color var(--m-base) var(--m-ease-out), transform var(--m-base) var(--m-ease-out); }
+.mr-check h3, .mr-check p { transition: opacity var(--m-base) var(--m-ease-out); }
+html.motion .mr-check[data-steps] li:not(.is-active) h3, html.motion .mr-check[data-steps] li:not(.is-active) p { opacity: .65; }
+html.motion .mr-check[data-steps] li.is-active .mr-num { background: var(--deep); color: var(--white); transform: scale(1.08); }
+
+/* Floor plans settle into their cards */
+.mr-plan img { transition: transform var(--m-slow) var(--m-ease-out), opacity var(--m-base) var(--m-ease-out); }
+html.motion .mr-layout.rv-run .mr-plan img { transition-delay: calc(var(--d, 0ms) + 150ms); }
+html.motion .mr-layout[data-reveal]:not(.is-in) .mr-plan img { opacity: 0; transform: scale(1.06); }
+
+/* 12 of 1,236: the 12 dots light up one by one, each with a single ripple */
+.mr-on::before { transition: transform 520ms var(--m-ease-out), opacity 320ms var(--m-ease-out); transition-delay: calc(450ms + var(--i) * 110ms); }
+html.motion .mr-dots[data-reveal]:not(.is-in) .mr-on::before { opacity: 0; transform: scale(0); }
+@keyframes m-ripple { from { opacity: .8; transform: scale(.8); } to { opacity: 0; transform: scale(2.8); } }
+html.motion .mr-dots.is-in .mr-on::after { animation: m-ripple 1100ms var(--m-ease-out) calc(520ms + var(--i) * 110ms) forwards; }
+
+@media (prefers-reduced-motion: reduce) {
+  html.motion .mr-hl, html.motion .mr-hero-fig img, html.motion .mr-dots.is-in .mr-on::after { animation: none; }
+  html.motion [data-reveal] .mr-draw *, html.motion [data-reveal] .mr-tick path { stroke-dashoffset: 0; transition: none; }
+  html.motion [data-reveal] .mr-x, html.motion .mr-why .mr-num, html.motion .mr-plan img, html.motion .mr-on::before { opacity: 1; transform: none; transition: none; }
+}
+@media print { .mr-draw *, .mr-tick path { stroke-dashoffset: 0 !important; } .mr-x, .mr-num, .mr-plan img, .mr-on::before { opacity: 1 !important; transform: none !important; } .mr-hl { background-size: 100% 100% !important; } }
