@@ -222,3 +222,11 @@ html.se-hscroll .se-tl-panel { width: 400px; min-height: 280px; flex: 0 0 auto; 
 .se-h1-l2 { color: var(--brand); }
 /* no justified text on this page — short lines get stretched word gaps */
 html[data-lang] main .se-hero p, html[data-lang] main .se-hero .se-sub, html[data-lang] main [class*="se-"] p, html[data-lang] main .se-cap, html[data-lang] main .mr-inshort { text-align: left; }
+/* hero readability: shade where the text sits, keep the skyline bright on the right */
+.se-hero-bg::after { background:
+  linear-gradient(90deg, rgba(14, 29, 28, .72) 0%, rgba(14, 29, 28, .55) 38%, rgba(14, 29, 28, .18) 70%, rgba(14, 29, 28, .05) 100%),
+  linear-gradient(180deg, rgba(14, 29, 28, .5) 0%, rgba(14, 29, 28, .45) 40%, rgba(14, 29, 28, .8) 75%, var(--se-night) 100%); }
+.se-h1, .se-sub, .se-chip, .se-h1-a { text-shadow: 0 2px 18px rgba(0, 0, 0, .55), 0 1px 3px rgba(0, 0, 0, .35); }
+@media (max-width: 760px) {
+  .se-hero-bg::after { background: linear-gradient(180deg, rgba(14, 29, 28, .6) 0%, rgba(14, 29, 28, .6) 55%, rgba(14, 29, 28, .85) 80%, var(--se-night) 100%); }
+}
