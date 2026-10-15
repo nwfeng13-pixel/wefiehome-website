@@ -1089,3 +1089,53 @@ html[data-lang] main .mr-slogan { text-align: left; }
 }
 .mr-perf-card .zoom { margin-top: auto; }
 html[data-lang] main .mr-perf-title { text-align: left; }
+
+/* ===== J Dupion Residence owner guide (/owners/j-dupion-residence/) ===== */
+.jd-hero { padding: 112px 0 96px; }
+.jd-hero .eyebrow { color: var(--brand); }
+.jd-sub { font-size: clamp(1.1rem, 2vw, 1.35rem); font-weight: 800; color: var(--brand) !important; margin: -.2em 0 .6em; }
+.jd-hero .lead { max-width: 680px; }
+.jd-trust li { background: rgba(255, 255, 255, .92); }
+.jd-units-h { margin: 40px 0 16px; font-size: 1.2rem; }
+.jd-sits .mr-stage::after { content: none; }
+.jd-photos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 28px; }
+.jd-photo { margin: 0; }
+.jd-photo-img { border-radius: 16px; overflow: hidden; aspect-ratio: 3 / 2; background: var(--brand-soft); }
+.jd-photo-img img { width: 100%; height: 100%; object-fit: cover; }
+.jd-photo figcaption { font-size: .85rem; color: var(--muted); margin-top: 8px; }
+.jd-bld-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px; margin-top: 36px; align-items: start; }
+.jd-lay { list-style: none; padding: 0; margin: 14px 0 0; display: grid; gap: 12px; }
+.jd-lay li { background: var(--white); border: 1px solid var(--line); border-left: 5px solid var(--brand); border-radius: 14px; padding: 16px 18px; }
+.jd-lay li:first-child { border-left-color: var(--deep); }
+.jd-lay-top { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.jd-lay-top strong { color: var(--deep); font-size: 1.05rem; }
+.jd-lay-top span { font-weight: 700; color: var(--deep-2); font-size: .9rem; }
+.jd-lay p { margin: 6px 0 0; color: var(--muted); font-size: .95rem; }
+.jd-why { background: var(--brand-soft); border-radius: 16px; padding: 20px 22px; }
+.jd-why ul { list-style: none; padding: 0; margin: 12px 0 0; display: grid; gap: 10px; }
+.jd-why li { display: flex; gap: 10px; align-items: flex-start; }
+.jd-why svg { flex: 0 0 auto; color: var(--deep-2); margin-top: 3px; }
+.jd-facts { margin-top: 18px; }
+.jd-facts th { width: 34%; }
+.jd-work { margin-top: 28px; }
+.jd-work .mr-work-group { background: var(--white); }
+.jd-work .mr-wg-ic { background: var(--brand-soft); box-shadow: none; }
+.jd-stmt { margin-top: 40px; }
+.jd-fee { margin-top: 36px; max-width: 760px; }
+.bld-owner-link { margin-top: 16px; }
+@media (max-width: 1100px) { .jd-photos { gap: 12px; } }
+@media (max-width: 860px) { .jd-bld-grid { grid-template-columns: 1fr; gap: 24px; } }
+@media (max-width: 760px) {
+  .jd-hero { padding: 72px 0 60px; }
+  .jd-photos { grid-template-columns: 1fr; }
+  html[data-lang="en"] main .jd-lay p, html[data-lang="en"] main .jd-why li, html[data-lang="en"] main .jd-hero .lead { text-align: left; }
+}
+@media (min-width: 761px) {
+  .jd-fee { max-width: none; display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 36px; align-items: center; }
+  .jd-fee > * { grid-column: 1; }
+  .jd-fee > .btn { grid-column: 2; grid-row: 1 / span 2; align-self: center; margin-top: 0; }
+}
+html[data-lang] main .jd-sub { text-align: left; }
+.building-hero .bld-owner-link { color: rgba(255, 255, 255, .85); }
+.building-hero .bld-owner-link a { color: var(--brand); font-weight: 700; }
+.owner-card-img img[src*="j-dupion"], .og-card-img img[src*="j-dupion"] { object-position: 74% 50%; }
