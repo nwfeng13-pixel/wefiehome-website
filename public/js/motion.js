@@ -23,7 +23,7 @@
     "main .mr-close", "main .jump", "main .building-head", "main .table-wrap", "main .contact-list",
     "main .mr-stage", "main .mr-layout", "main .mr-check > li", "main .mr-pdf", "main .mr-note",
     "main .mr-proof-item", "main .mr-stats", "main .mr-assess", "main .owner-card", "main .og-card", "main .og-ask", "main .mr-why > li", "main .mr-fit-col", "main .mr-ivan-fig figcaption", "main .mr-stmt-fig figcaption", "main .mr-inshort",
-    "main .mr-work-group", "main .mr-dots", "main .mr-perf", "main .jd-lay > li", "main .jd-why", "main .jd-photo figcaption", "main .mv-row", "main .mv-spot-fig", "main .mv-note-list > li", "main .mv-pair figure", "main .mv-guest", "main .mv-go", "main .mv-bento figure", "main .mv-honest", "main .mv-tile", "main .mv-steps > li", "main .mv-strip"
+    "main .mr-work-group", "main .mr-dots", "main .mr-perf", "main .jd-lay > li", "main .jd-why", "main .jd-photo figcaption", "main .mv-row", "main .mv-spot-fig", "main .mv-note-list > li", "main .mv-pair figure", "main .mv-guest", "main .mv-go", "main .mv-bento figure", "main .mv-honest", "main .mv-tile", "main .mv-steps > li", "main .mv-strip", "main .se-promise", "main .se-card-check", "main .se-setup-photos figure", "main .se-dist", "main .se-guests li", "main .se-explorer", "main .se-ivan", "main .se-limited", "main .se-setup-cap"
   ].join(",");
   var IMAGES = "main .mr-media, main .building-photo, main .hiw-media, main .perf-img, main .mr-ivan-fig picture, main .mr-stmt-fig > a, main .jd-photo-img";
 
