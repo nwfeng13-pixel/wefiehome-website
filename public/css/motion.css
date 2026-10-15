@@ -182,3 +182,23 @@ html.motion .mr-dots.is-in .mr-on::after { animation: m-ripple 1100ms var(--m-ea
   html.motion [data-reveal] .mr-x, html.motion .mr-why .mr-num, html.motion .mr-plan img, html.motion .mr-on::before { opacity: 1; transform: none; transition: none; }
 }
 @media print { .mr-draw *, .mr-tick path { stroke-dashoffset: 0 !important; } .mr-x, .mr-num, .mr-plan img, .mr-on::before { opacity: 1 !important; transform: none !important; } .mr-hl { background-size: 100% 100% !important; } }
+
+/* ---------- M Vertica owner page (v2.1 owner-page extras) ---------- */
+@keyframes m-clip-up { from { clip-path: inset(100% 0 0 0); } to { clip-path: inset(0 0 0 0); } }
+html.motion .mv-hero-fig { animation: m-clip-up var(--m-slow) var(--m-ease-out) calc(var(--m-stagger) * 2) both; }
+html.motion .mv-hero-fig img { animation: m-settle-sm var(--m-hero-bg) var(--m-ease-out) both; }
+html.motion .mv-hero-copy > * { animation: m-rise var(--m-slow) var(--m-ease-out) both; }
+html.motion .mv-hero-copy > :nth-child(2) { animation-delay: calc(var(--m-stagger) * 1.5); }
+html.motion .mv-hero-copy > :nth-child(3) { animation-delay: calc(var(--m-stagger) * 3); }
+html.motion .mv-hero-copy > :nth-child(4) { animation-delay: calc(var(--m-stagger) * 4.5); }
+html.motion .mv-hero-copy > :nth-child(n+5) { animation-delay: calc(var(--m-stagger) * 6); }
+html.motion .mv-h1-2 { animation: m-hl 900ms var(--m-ease-out) 900ms both; }
+/* hotspot markers pop in one by one */
+html.motion .mv-spot-fig .mv-dot { transition: opacity var(--m-base) var(--m-ease-out), transform var(--m-base) var(--m-ease-out), background-color var(--m-fast) var(--m-ease-io), color var(--m-fast) var(--m-ease-io); }
+html.motion .mv-spot-fig.rv-run .mv-dot { transition-delay: calc(300ms + var(--i) * 140ms); }
+html.motion .mv-spot-fig[data-reveal]:not(.is-in) .mv-dot { opacity: 0; transform: translate(-50%, -50%) scale(.3); }
+@media (prefers-reduced-motion: reduce) {
+  html.motion .mv-hero-fig, html.motion .mv-hero-fig img, html.motion .mv-hero-copy > *, html.motion .mv-h1-2 { animation: none; }
+  html.motion .mv-spot-fig .mv-dot { opacity: 1; transform: translate(-50%, -50%); transition: none; }
+}
+@media print { .mv-dot { opacity: 1 !important; } .mv-hero-fig { clip-path: none !important; } }

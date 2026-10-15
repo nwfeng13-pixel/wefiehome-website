@@ -84,3 +84,23 @@
 
   document.querySelectorAll("[data-year]").forEach(function (el) { el.textContent = new Date().getFullYear(); });
 })();
+
+/* M Vertica owner page: link photo markers and notes (hover, focus or tap) */
+(function () {
+  var fig = document.querySelector(".mv-spot-fig");
+  if (!fig) return;
+  var dots = [].slice.call(document.querySelectorAll(".mv-dot")), notes = [].slice.call(document.querySelectorAll(".mv-note-list li"));
+  function on(i) {
+    dots.forEach(function (d) { d.classList.toggle("is-on", d.dataset.spot === String(i)); });
+    notes.forEach(function (n) { n.classList.toggle("is-on", n.dataset.spot === String(i)); });
+  }
+  notes.forEach(function (n) {
+    n.addEventListener("mouseenter", function () { on(n.dataset.spot); });
+    n.addEventListener("click", function () { on(n.dataset.spot); });
+  });
+  dots.forEach(function (d) {
+    d.addEventListener("mouseenter", function () { on(d.dataset.spot); });
+    d.addEventListener("click", function () { on(d.dataset.spot); });
+  });
+  on(0);
+})();
