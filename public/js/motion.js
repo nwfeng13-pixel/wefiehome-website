@@ -32,7 +32,7 @@
     return !el.parentElement.closest("[data-reveal]") && !el.closest(".page-hero, .hero-photo, [data-no-reveal]") && !el.matches(".mv-strip .listing");
   });
   fades.forEach(function (el) { el.setAttribute("data-reveal", ""); });
-  var imgs = [].slice.call(document.querySelectorAll(IMAGES));
+  var imgs = [].slice.call(document.querySelectorAll(IMAGES)).filter(function (el) { return !el.closest("[data-no-reveal]"); });
   imgs.forEach(function (el) { el.setAttribute("data-reveal-img", ""); });
 
   /* ---------- 2. Count-up for statistics ---------- */

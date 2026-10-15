@@ -1,0 +1,94 @@
+/* =====================================================================
+   WefieHome — Maxim Risen owner page, "Daylight Cheras" (this page only)
+   Bright, editorial: warm off-white, turquoise, Fraunces serif display.
+   Animated states only under html.mrx-anim; otherwise finished states.
+   ===================================================================== */
+.mrx-page { --mx-paper: #fbfaf6; --mx-stone: #f3f1ea; --mx-serif: "Fraunces", "Noto Serif SC", Georgia, "Noto Sans SC", serif; background: var(--mx-paper); }
+.mrx-page main .section { background: var(--mx-paper); }
+.mrx-page main .section.alt { background: var(--mx-stone); }
+.mrx-page main h1, .mrx-page main h2, .mrx-page .mr-slogan, .mrx-page .mr-type strong, .mrx-page .mr-size strong,
+.mrx-page .mrx-cn, .mrx-page .mr-fee-line, .mrx-page .mrx-quote, .mrx-page .cta-band h2 { font-family: var(--mx-serif); font-optical-sizing: auto; }
+.mrx-page main h2 { font-weight: 600; letter-spacing: -.01em; font-size: clamp(1.8rem, 3.4vw, 2.6rem); line-height: 1.12; }
+.mrx-page main h3 { letter-spacing: -.005em; }
+.mrx-page .eyebrow { color: var(--deep-2); letter-spacing: .16em; }
+
+/* smooth-scroll mode */
+html.mrx-smooth .site-header { position: fixed; top: 0; left: 0; right: 0; }
+html.mrx-smooth .mr-jump { position: relative; top: auto; }
+html.mrx-smooth .mr-pdf { position: relative; top: auto; }
+#smooth-content { will-change: transform; }
+
+/* ---------- hero ---------- */
+.mrx-page .mr-hero { background: linear-gradient(115deg, var(--mx-paper) 0%, #f2fbfa 46%, #dff6f6 100%); }
+.mrx-page .mr-hero h1 { font-weight: 600; font-size: clamp(2.2rem, 4.6vw, 3.6rem); line-height: 1.05; letter-spacing: -.02em; }
+.mrx-page .mr-hl { color: var(--deep); }
+.mrx-page .mr-slogan { font-weight: 500; font-style: italic; font-size: clamp(1.25rem, 2.2vw, 1.6rem); color: var(--deep-2); }
+.mrx-page .mr-hero .lead { font-size: 1.08rem; }
+.mrx-12 { position: absolute; z-index: 1; right: 22%; top: 50%; transform: translateY(-58%); font-family: var(--mx-serif); font-weight: 700; font-size: clamp(12rem, 26vw, 24rem); line-height: 1; color: transparent; -webkit-text-stroke: 2px rgba(45, 102, 98, .16); pointer-events: none; user-select: none; }
+.mrx-page .mr-hero-copy { z-index: 3; }
+.mrx-page .mr-trust li { background: var(--white); }
+@media (max-width: 860px) { .mrx-12 { right: 4%; top: 30px; transform: none; font-size: 9rem; -webkit-text-stroke-color: rgba(255, 255, 255, .55); z-index: 2; } }
+
+/* ---------- handover journey ---------- */
+.mrx-journey { position: relative; height: 4px; margin: 34px 4px 0; border-radius: 4px; background: rgba(52, 83, 81, .12); }
+.mrx-journey-fill { position: absolute; inset: 0; border-radius: 4px; background: linear-gradient(90deg, var(--brand-mid), var(--deep-2)); transform-origin: 0 50%; }
+.mrx-page .mr-stages { margin-top: 18px; }
+.mrx-page .mr-stage { background: var(--white); transition: border-color var(--m-base) var(--m-ease-out), box-shadow var(--m-base) var(--m-ease-out), transform var(--m-base) var(--m-ease-out); }
+.mrx-page .mr-stage::after { font-family: var(--mx-serif); font-size: 1.6rem; font-weight: 600; top: 12px; }
+html.mrx-anim .mr-stage.is-on { border-color: var(--brand-mid); box-shadow: 0 16px 34px rgba(22, 40, 39, .1); transform: translateY(-4px); }
+html.mrx-anim .mr-stage.is-on .mr-stage-ic { background: var(--brand); }
+@media (max-width: 760px) { .mrx-journey { display: none; } }
+
+/* ---------- layouts ---------- */
+.mrx-page .mr-layout { will-change: transform; }
+.mrx-page .mr-type strong { font-weight: 600; font-size: 2.8rem; }
+.mrx-page .mr-flag { display: inline-block; }
+
+/* ---------- checklist ring ---------- */
+.mrx-pdf-top { display: flex; align-items: center; justify-content: space-between; gap: 14px; }
+.mrx-ring { position: relative; width: 66px; height: 66px; flex: 0 0 auto; }
+.mrx-ring svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+.mrx-ring circle { fill: none; stroke-width: 4; }
+.mrx-ring-bg { stroke: rgba(255, 255, 255, .18); }
+.mrx-ring-fg { stroke: var(--brand); stroke-linecap: round; }
+.mrx-ring-n { position: absolute; inset: 0; display: grid; place-items: center; font-weight: 800; font-size: .78rem; color: var(--white); }
+
+/* ---------- comparison sweep ---------- */
+.mrx-page table.mr-compare tbody td.is-str { background: linear-gradient(rgba(164, 244, 247, .65), rgba(164, 244, 247, .65)) no-repeat 0 0 / var(--sweep, 100%) 100%, var(--brand-soft); }
+
+/* ---------- 1,236 → 12 ---------- */
+.mrx-page #why-12 { padding: 64px 0; }
+.mrx-page .mr-why-grid { align-items: center; }
+.mrx-counter { display: flex; align-items: baseline; gap: 12px; margin: 10px 0 6px; }
+.mrx-cn { font-size: clamp(3.4rem, 7vw, 5.6rem); font-weight: 600; line-height: 1; color: var(--deep); font-variant-numeric: tabular-nums; min-width: 3.1ch; }
+.mrx-cl { font-weight: 800; color: var(--deep-2); text-transform: uppercase; letter-spacing: .1em; font-size: .85rem; }
+.mrx-page .mr-dots { max-width: 460px; margin-top: 14px; }
+.mrx-page .mr-dots-grid { --dotA: .2; --dot: radial-gradient(circle at center, rgba(52, 83, 81, var(--dotA)) 0 28%, transparent 33%); }
+html.mrx-why-anim .mr-on::before { opacity: 1 !important; transform: none !important; transition: none !important; }
+html.mrx-why-anim .mr-on::after { animation: none !important; }
+html.mrx-why-anim .mr-why .mr-num { opacity: 1 !important; transform: none !important; }
+
+/* ---------- Meet Ivan ---------- */
+.mrx-page .mr-ivan-fig picture { overflow: hidden; border-radius: 22px; }
+.mrx-page .mr-ivan-fig img { border-radius: 0; }
+html.mrx-anim .mr-ivan-fig img { transform: scale(1.14); }
+.mrx-page .mrx-quote { font-size: clamp(1.3rem, 2.2vw, 1.65rem); line-height: 1.35; font-weight: 500; color: var(--deep); border-left: 3px solid var(--brand-mid); padding-left: 18px; }
+.mrx-page .mrx-quote strong { font-weight: 700; }
+
+/* ---------- statement scan ---------- */
+.mrx-scan { position: absolute; left: 0; right: 0; top: 0; height: 3px; background: var(--brand); box-shadow: 0 0 18px 4px rgba(164, 244, 247, .8); opacity: 0; pointer-events: none; }
+
+/* ---------- how it works: vertical drawn line ---------- */
+.mrx-page .mr-steps { grid-template-columns: 1fr; max-width: 780px; position: relative; gap: 26px; }
+.mrx-page .mr-steps::before, .mrx-page .mr-steps::after { content: ""; position: absolute; left: 20px; top: 21px; bottom: 21px; width: 2px; margin-left: -1px; }
+.mrx-page .mr-steps::before { background: rgba(52, 83, 81, .14); }
+.mrx-page .mr-steps::after { background: var(--deep-2); transform-origin: 50% 0; transform: scaleY(var(--fill, 1)); }
+.mrx-page .mr-steps li { z-index: 1; }
+.mrx-page .mr-steps h3 { font-family: var(--mx-serif); font-weight: 600; font-size: 1.3rem; }
+
+/* ---------- misc ---------- */
+.mrx-page .mr-fee-line { font-weight: 600; }
+.mrx-page .cta-band h2 { font-weight: 600; font-size: clamp(1.8rem, 3.6vw, 2.6rem); }
+html[data-lang] .mrx-page main .mr-hero p, html[data-lang] .mrx-page main .mrx-quote, html[data-lang] .mrx-page main .mr-why-close, html[data-lang] .mrx-page main .lead { text-align: left; }
+@media print { .mrx-12, .mrx-scan { display: none; } }
+@media (max-width: 860px) { .mrx-12 { display: none; } }
