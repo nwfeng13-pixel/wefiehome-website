@@ -137,20 +137,22 @@
       scrollTrigger: { trigger: ".mr-work-groups", start: "top 78%", once: true } });
   });
 
-  /* ---------- 9. Signature: 1,236 → 12 (pinned on screens where it fits) ---------- */
+  /* ---------- 9. Signature: 1,236 → 12 (scroll-linked counter; reasons reveal on entry) ---------- */
   var why = $("#why-12"), cn = $(".mrx-cn");
   if (why && cn) {
     $(".mr-why-grid").setAttribute("data-no-reveal", "");
     mm.add({ big: BIG, small: SMALL }, function (ctx) {
       root.classList.add("mrx-why-anim");
-      var fits = why.offsetHeight <= window.innerHeight - hdr();
-      var counter = { v: 1236 };
       var ones = $$(".mr-on"), reasons = $$(".mr-why > li"), lbl = $(".mrx-cl");
-      var tl = gsap.timeline({ defaults: { ease: "none" }, scrollTrigger: fits
-        ? { trigger: why, pin: true, start: "top top+=" + hdr(), end: ctx.conditions.small ? "+=110%" : "+=160%", scrub: 0.6, anticipatePin: 1 }
-        : { trigger: why, start: "top 65%", end: "bottom 70%", scrub: 0.6 } });
-      var grid = $(".mr-dots-grid");
+      var counter = { v: 1236 }, grid = $(".mr-dots-grid");
       var units = lang() === "zh" ? "个单位" : "units", partners = lang() === "zh" ? "位业主伙伴" : "owner partners";
+      // counter + dots follow the scroll (no pinning, so nothing hides under the menu bar)
+      var tl = gsap.timeline({ defaults: { ease: "none" }, scrollTrigger: { trigger: ".mr-dots", start: "top 85%", end: "center 45%", scrub: 0.5 } });
+      // the reasons on the right appear as soon as their column comes into view
+      gsap.fromTo(reasons, { opacity: 0, x: 40 }, { opacity: 1, x: 0, duration: 0.6, ease: "power2.out", stagger: 0.12,
+        scrollTrigger: { trigger: ".mr-why", start: "top 85%", once: true } });
+      gsap.fromTo(".mr-why-close, #why-12 .mr-why-grid .btn", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.5, stagger: 0.1, delay: 0.5,
+        scrollTrigger: { trigger: ".mr-why", start: "top 85%", once: true } });
       tl.fromTo(grid, { "--dotA": 0.7 }, { "--dotA": 0.7, duration: 0.2 })
         .to(counter, { v: 12, duration: 1, ease: "power2.inOut", onUpdate: function () {
             cn.textContent = Math.round(counter.v).toLocaleString("en-US");
@@ -158,8 +160,7 @@
           } }, 0.2)
         .to(grid, { "--dotA": 0.14, duration: 0.8 }, 0.4)
         .fromTo(ones, { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, stagger: 0.04, ease: "back.out(2)" }, 0.9)
-        .fromTo(reasons, { opacity: 0, x: 40 }, { opacity: 1, x: 0, duration: 0.4, stagger: 0.18, ease: "power2.out" }, 1.1)
-        .fromTo(".mr-why-close, #why-12 .mr-why-grid .btn", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.3, stagger: 0.1 }, 1.8);
+;
       return function () { root.classList.remove("mrx-why-anim"); cn.textContent = "1,236"; };
     });
   }

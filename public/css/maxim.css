@@ -92,3 +92,6 @@ html.mrx-anim .mr-ivan-fig img { transform: scale(1.14); }
 html[data-lang] .mrx-page main .mr-hero p, html[data-lang] .mrx-page main .mrx-quote, html[data-lang] .mrx-page main .mr-why-close, html[data-lang] .mrx-page main .lead { text-align: left; }
 @media print { .mrx-12, .mrx-scan { display: none; } }
 @media (max-width: 860px) { .mrx-12 { display: none; } }
+/* why-12: reasons sit at the top beside the heading, not halfway down the section */
+.mrx-page .mr-why-grid { align-items: start; }
+@media (min-width: 961px) { .mrx-page .mr-why-grid > div:last-child { padding-top: 38px; } }
