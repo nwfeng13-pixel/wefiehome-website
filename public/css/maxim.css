@@ -95,3 +95,19 @@ html[data-lang] .mrx-page main .mr-hero p, html[data-lang] .mrx-page main .mrx-q
 /* why-12: reasons sit at the top beside the heading, not halfway down the section */
 .mrx-page .mr-why-grid { align-items: start; }
 @media (min-width: 961px) { .mrx-page .mr-why-grid > div:last-child { padding-top: 38px; } }
+/* why-12 v2: header row (title left, big counter right), then dots card and reasons side by side, equal weight */
+.mrx-why-head { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 32px; align-items: end; margin-bottom: 30px; }
+.mrx-why-head .lead { margin-bottom: 0; }
+.mrx-why-head .mrx-counter { justify-self: end; margin: 0; }
+.mrx-page #why-12 .mr-why-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; align-items: stretch; }
+.mrx-page #why-12 .mr-dots { max-width: none; margin: 0; }
+.mrx-why-side { display: flex; flex-direction: column; justify-content: center; padding-top: 0 !important; }
+.mrx-page #why-12 .mr-why { gap: 14px; margin-bottom: 22px; }
+.mrx-page #why-12 .mr-why li { padding: 18px 20px; }
+.mrx-page #why-12 .mr-why-close { font-size: 1.12rem; }
+.mrx-why-side .btn { align-self: flex-start; }
+@media (max-width: 960px) {
+  .mrx-why-head { grid-template-columns: 1fr; gap: 10px; }
+  .mrx-why-head .mrx-counter { justify-self: start; }
+  .mrx-page #why-12 .mr-why-grid { grid-template-columns: 1fr; gap: 24px; }
+}
