@@ -217,3 +217,8 @@ html.se-hscroll .se-tl-panel { width: 400px; min-height: 280px; flex: 0 0 auto; 
 .se-swipe { margin: 4px 20px 0; text-align: right; }
 .container.se-head { max-width: var(--max); margin-left: auto; margin-right: auto; }
 .container.se-head > * { max-width: 780px; }
+/* headline: punchline on its own line, in brand turquoise */
+.se-h1-l1, .se-h1-l2 { display: block; }
+.se-h1-l2 { color: var(--brand); }
+/* no justified text on this page — short lines get stretched word gaps */
+html[data-lang] main .se-hero p, html[data-lang] main .se-hero .se-sub, html[data-lang] main [class*="se-"] p, html[data-lang] main .se-cap, html[data-lang] main .mr-inshort { text-align: left; }
