@@ -69,7 +69,7 @@
       var img = document.createElement("img");
       img.src = a.getAttribute("href");
       var src = a.querySelector("img");
-      img.alt = src ? src.alt : "";
+      img.alt = src ? src.alt : (a.dataset.alt || "");
       var btn = document.createElement("button");
       btn.type = "button"; btn.setAttribute("aria-label", "Close"); btn.innerHTML = "&times;";
       box.appendChild(img); box.appendChild(btn);

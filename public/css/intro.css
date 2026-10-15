@@ -144,3 +144,20 @@
 }
 .ix-flip, .ix-face-f, .ix-face-b { text-align: left; }
 .ix-face { height: 160px; }
+
+/* stat cards open the Airbnb dashboard screenshot */
+a.ix-stat { text-decoration: none; cursor: zoom-in; -webkit-tap-highlight-color: transparent; transition: transform .2s ease, box-shadow .2s ease; }
+a.ix-stat:active { transform: scale(.97); }
+@media (hover: hover) { a.ix-stat:hover { box-shadow: 0 8px 20px rgba(22, 40, 39, .1); } }
+.ix-proof { margin-top: auto; padding-top: 6px; display: inline-flex; align-items: center; gap: 4px; font-style: normal; font-weight: 700; font-size: .76rem; color: var(--deep-2); }
+.ix-proof svg { width: 14px; height: 14px; }
+
+/* full website button */
+.ix-site { display: flex; align-items: center; gap: 12px; margin: 26px 0 0; padding: 14px 16px; border: 2px solid var(--deep-2); border-radius: 16px; background: var(--white); color: var(--deep); text-decoration: none; text-align: left; transition: transform .2s ease, background-color .2s ease; }
+.ix-site:active { transform: scale(.98); }
+@media (hover: hover) { .ix-site:hover { background: var(--brand-soft); } }
+.ix-site > svg:first-child { flex: 0 0 auto; color: var(--deep-2); }
+.ix-site > svg:last-child { flex: 0 0 auto; margin-left: auto; color: var(--deep-2); }
+.ix-site-t { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.ix-site-t strong { font-size: .95rem; line-height: 1.25; }
+.ix-site-t small { font-size: .76rem; color: var(--muted); font-weight: 500; }
