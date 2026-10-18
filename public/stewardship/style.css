@@ -158,14 +158,14 @@ html[data-lang="zh"] .sw-home h1 em { font-style: normal; }
 .sw-sn { font-family: var(--sw-serif); color: var(--sw-timber); font-size: .95rem; }
 .sw-steps strong { color: var(--sw-forest); }
 .sw-steps small { color: var(--sw-muted); font-size: .76rem; line-height: 1.35; }
-.sw-faq { margin: 18px 0 0; }
-.sw-faq details { border-top: 1px solid var(--sw-line); padding: 12px 0; }
-.sw-faq details:last-child { border-bottom: 1px solid var(--sw-line); }
-.sw-faq summary { font-weight: 700; color: var(--sw-forest); cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 10px; font-size: .94rem; }
+.sw-faq { margin: 18px 0 0; display: grid; gap: 8px; }
+.sw-faq details { margin: 0; padding: 0; background: var(--sw-paper); border: 1px solid var(--sw-line); border-radius: 16px; box-shadow: none; }
+.sw-faq summary { list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 15px 16px 15px 18px; font-weight: 700; color: var(--sw-forest); font-size: .94rem; line-height: 1.35; cursor: pointer; }
 .sw-faq summary::-webkit-details-marker { display: none; }
-.sw-faq summary::after { content: "+"; font-size: 1.2rem; line-height: 1; color: var(--sw-timber); }
-.sw-faq details[open] summary::after { content: "–"; }
-.sw-faq p { margin: 8px 0 0; font-size: .88rem; color: var(--sw-muted); line-height: 1.55; }
+.sw-faq summary::after { content: ""; flex: 0 0 28px; width: 28px; height: 28px; border-radius: 50%; font-size: 0;
+  background: linear-gradient(var(--sw-timber), var(--sw-timber)) center / 12px 2px no-repeat, linear-gradient(var(--sw-timber), var(--sw-timber)) center / 2px 12px no-repeat, var(--sw-sand); transition: background-color .2s ease; }
+.sw-faq details[open] summary::after { background: linear-gradient(#fff, #fff) center / 12px 2px no-repeat, var(--sw-forest); }
+.sw-faq p { margin: 0; padding: 0 18px 16px; font-size: .88rem; color: var(--sw-muted); line-height: 1.55; }
 .sw-ready { list-style: none; padding: 0; margin: 18px 0 0; display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; }
 .sw-ready li { font-size: .76rem; font-weight: 700; color: var(--sw-forest); background: var(--sw-sand); padding: 6px 12px; border-radius: 999px; }
 .sw-more { display: flex; align-items: center; justify-content: center; gap: 6px; margin: 20px 0 0; font-weight: 700; color: var(--sw-forest); text-decoration: none; font-size: .9rem; }
