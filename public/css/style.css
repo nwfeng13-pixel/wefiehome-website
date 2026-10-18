@@ -1260,3 +1260,47 @@ html[data-lang] main .jd-sub { text-align: left; }
 .og-grid { grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); }
 .og-grid .og-ask { grid-column: 1 / -1; }
 .owner-cards { grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: 18px; } .owner-card h2 { font-size: clamp(1.15rem, 1.8vw, 1.35rem); }
+
+/* ===== Guest reviews (owner pages) ===== */
+.rv-section { background: linear-gradient(180deg, var(--brand-soft) 0%, var(--bg) 100%); overflow: hidden; }
+.rv-section.alt { background: linear-gradient(180deg, var(--alt) 0%, var(--brand-soft) 100%); }
+.rv-head { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin: 6px 0 22px; font-weight: 700; color: var(--deep); text-align: left !important; }
+.rv-head > span { display: inline-flex; align-items: center; }
+.rv-score { font-size: 1.15rem; color: var(--deep); }
+.rv-score::first-letter { color: #e0a526; }
+.rv-head > span:nth-child(2) { color: var(--muted); font-weight: 600; }
+.rv-sh { background: var(--deep); color: #fff; font-size: .74rem; letter-spacing: .04em; padding: 4px 10px; border-radius: 999px; }
+.rv-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.rv-card { margin: 0; background: var(--white); border: 1px solid var(--line); border-radius: 18px; padding: 20px 20px 16px; display: flex; flex-direction: column; gap: 12px; box-shadow: 0 8px 22px rgba(14, 58, 65, .06); }
+.rv-tag { align-self: flex-start; background: var(--brand-soft); color: var(--deep-2); font-size: .72rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; padding: 5px 10px; border-radius: 999px; }
+.rv-card blockquote { margin: 0; flex: 1; font-size: .98rem; line-height: 1.6; color: var(--ink); }
+.rv-tr { display: block; margin-top: 6px; font-size: .72rem; color: var(--muted); font-style: italic; }
+.rv-card figcaption { display: flex; align-items: center; gap: 10px; padding-top: 12px; border-top: 1px solid var(--line); }
+.rv-av { width: 38px; height: 38px; flex: 0 0 38px; border-radius: 50%; display: grid; place-items: center; font-weight: 800; color: #fff; background: hsl(var(--rv-h, 170) 32% 42%); }
+.rv-who { display: flex; flex-direction: column; min-width: 0; line-height: 1.25; }
+.rv-who strong { color: var(--deep); font-size: .95rem; }
+.rv-who small { color: var(--muted); font-size: .76rem; }
+.rv-stars { margin-left: auto; color: #e0a526; letter-spacing: 1px; font-size: .9rem; white-space: nowrap; }
+html[data-lang] main .rv-card blockquote, html[data-lang] main .rv-section .lead { text-align: left; }
+@media (max-width: 900px) { .rv-grid { grid-template-columns: 1fr; gap: 12px; } }
+
+/* auto-scrolling row (showcase pages) */
+.rv-marquee { overflow: hidden; padding: 6px 0 14px; -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); outline: none; }
+.rv-track { display: flex; gap: 18px; width: max-content; animation: rv-scroll 70s linear infinite; }
+.rv-dup { display: contents; }
+.rv-marquee .rv-card { width: 340px; flex: 0 0 340px; }
+.rv-marquee:hover .rv-track, .rv-marquee:focus-within .rv-track, .rv-marquee.is-paused .rv-track { animation-play-state: paused; }
+@keyframes rv-scroll { from { transform: translateX(0); } to { transform: translateX(calc(-50% - 9px)); } }
+@media (max-width: 700px) { .rv-marquee .rv-card { width: 280px; flex-basis: 280px; } .rv-track { animation-duration: 55s; } }
+@media (prefers-reduced-motion: reduce) {
+  .rv-marquee { overflow-x: auto; -webkit-mask-image: none; mask-image: none; }
+  .rv-track { animation: none; padding: 0 20px; }
+  .rv-dup { display: none; }
+}
+
+/* swipe row (app-style pages) */
+.rv-swipe { display: flex; gap: 10px; overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain; scrollbar-width: none; padding: 2px 2px 10px; margin: 0 -2px; outline: none; }
+.rv-swipe::-webkit-scrollbar { display: none; }
+.rv-swipe .rv-card { flex: 0 0 86%; scroll-snap-align: start; padding: 16px 16px 14px; gap: 10px; box-shadow: none; }
+.rv-swipe .rv-card blockquote { font-size: .9rem; line-height: 1.55; }
+.rv-swipe + * { margin-top: 6px; }

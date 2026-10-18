@@ -206,3 +206,17 @@ html[data-lang="zh"] .sw-home h1 em { font-style: normal; }
 .sw-stmt strong { font-family: var(--sw-serif); font-weight: 600; font-size: 1.02rem; color: #fff; }
 .sw-stmt small { font-size: .74rem; color: #d7b98c; font-weight: 700; }
 .sw-stmt > svg { color: #d7b98c; flex: 0 0 auto; }
+/* guest reviews on Home */
+.sw-rv { margin: 0 0 20px; }
+.sw-rv h3 { font-family: var(--sw-serif); font-weight: 600; color: var(--sw-forest); font-size: 1.25rem; line-height: 1.2; margin: 6px 0 8px; }
+.sw-page .rv-head { margin: 0 0 10px; font-size: .88rem; color: var(--sw-forest); }
+.sw-page .rv-score { color: var(--sw-forest); }
+.sw-page .rv-score::first-letter, .sw-page .rv-stars { color: var(--sw-timber); }
+.sw-page .rv-head > span:nth-child(2) { color: var(--sw-muted); }
+.sw-page .rv-sh { background: var(--sw-forest); color: #f3eadb; }
+.sw-page .rv-card { background: var(--sw-paper); border-color: var(--sw-line); }
+.sw-page .rv-tag { background: var(--sw-timber-soft); color: var(--sw-timber); }
+.sw-page .rv-card blockquote { color: var(--sw-ink); font-family: var(--sw-serif); font-size: .98rem; font-weight: 500; }
+.sw-page .rv-card figcaption { border-color: var(--sw-line); }
+.sw-page .rv-who strong { color: var(--sw-forest); }
+.sw-page .rv-av { background: hsl(var(--rv-h, 170) 25% 34%); }

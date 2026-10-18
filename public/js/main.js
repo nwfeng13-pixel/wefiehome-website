@@ -82,6 +82,13 @@
     });
   });
 
+  /* ---------- Guest reviews row: pause the auto-scroll while touched ---------- */
+  document.querySelectorAll(".rv-marquee").forEach(function (m) {
+    var tm;
+    m.addEventListener("touchstart", function () { clearTimeout(tm); m.classList.add("is-paused"); }, { passive: true });
+    m.addEventListener("touchend", function () { tm = setTimeout(function () { m.classList.remove("is-paused"); }, 2500); }, { passive: true });
+  });
+
   document.querySelectorAll("[data-year]").forEach(function (el) { el.textContent = new Date().getFullYear(); });
 })();
 
