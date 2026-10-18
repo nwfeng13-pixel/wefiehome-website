@@ -82,6 +82,14 @@
     });
   });
 
+  /* ---------- Before / after slider (case studies) ---------- */
+  document.querySelectorAll(".hm-ba").forEach(function (box) {
+    var r = box.querySelector(".hm-ba-range");
+    if (!r) return;
+    function set() { box.style.setProperty("--pos", r.value + "%"); }
+    r.addEventListener("input", set); set();
+  });
+
   /* ---------- Guest reviews row: pause the auto-scroll while touched ---------- */
   document.querySelectorAll(".rv-marquee").forEach(function (m) {
     var tm;
