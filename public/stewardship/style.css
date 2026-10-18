@@ -185,3 +185,17 @@ html[data-lang="zh"] .sw-home h1 em { font-style: normal; }
 .sw-screen.is-active .sw-home-in, .sw-screen.is-active > h2, .sw-screen.is-active > .sw-kicker:first-child { animation: sw-in .45s ease both; }
 @media (prefers-reduced-motion: reduce) { .sw-app *, .sw-app *::before { animation: none !important; transition: none !important; } }
 @media (max-width: 360px) { .sw-brand small { display: none; } .sw-top { padding-left: 12px; padding-right: 12px; } .sw-home h1 { font-size: 1.8rem; } .sw-screen h2 { font-size: 1.45rem; } .sw-fee-n { font-size: 4.6rem; } .sw-tab { font-size: .62rem; } }
+
+/* belief, principles, values */
+.sw-belief { margin: 0 0 20px; padding: 20px; background: radial-gradient(circle at 90% 0%, rgba(215, 185, 140, .28), transparent 55%), var(--sw-forest); color: #f3eadb; border-radius: 20px; }
+.sw-belief .sw-kicker { color: #d7b98c; }
+.sw-belief strong { display: block; font-family: var(--sw-serif); font-weight: 600; font-size: 1.4rem; line-height: 1.2; color: #fff; margin: 6px 0 8px; }
+.sw-belief p:last-child { margin: 0; font-size: .9rem; line-height: 1.55; color: rgba(243, 234, 219, .85); }
+.sw-quote-care { margin: 16px 0 0; }
+.sw-prin { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.sw-prin li { background: var(--sw-paper); border: 1px solid var(--sw-line); border-radius: 16px; padding: 12px; display: flex; flex-direction: column; gap: 2px; }
+.sw-prin li > span { width: 34px; height: 34px; border-radius: 10px; background: var(--sw-forest); color: #d7b98c; display: grid; place-items: center; margin-bottom: 6px; }
+.sw-prin strong { font-family: var(--sw-serif); font-weight: 600; color: var(--sw-forest); font-size: 1.02rem; }
+.sw-prin small { color: var(--sw-muted); font-size: .76rem; line-height: 1.35; }
+.sw-vals li > span { background: var(--sw-timber-soft); color: var(--sw-timber); }
+.sw-home h1 { font-size: 1.9rem; }
