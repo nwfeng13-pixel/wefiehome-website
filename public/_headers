@@ -1,2 +1,8 @@
 # Cloudflare custom headers. Search engines and AI tools are allowed to read the site.
 # (The testing-only "noindex" header was removed at launch.)
+
+# Private owner presentation: keep the page and its images out of search results (link-only)
+/stewardship
+  X-Robots-Tag: noindex, nofollow, noarchive
+/stewardship/*
+  X-Robots-Tag: noindex, nofollow, noarchive
