@@ -199,3 +199,10 @@ html[data-lang="zh"] .sw-home h1 em { font-style: normal; }
 .sw-prin small { color: var(--sw-muted); font-size: .76rem; line-height: 1.35; }
 .sw-vals li > span { background: var(--sw-timber-soft); color: var(--sw-timber); }
 .sw-home h1 { font-size: 1.9rem; }
+.sw-stmt { display: flex; align-items: center; gap: 14px; margin: 10px 0 0; padding: 10px 14px 10px 10px; background: var(--sw-forest); color: #f3eadb; border-radius: 18px; text-decoration: none; cursor: zoom-in; transition: transform .15s ease; }
+.sw-stmt:active { transform: scale(.98); }
+.sw-stmt img { width: 58px; height: 70px; object-fit: cover; object-position: top; border-radius: 8px; background: #fff; flex: 0 0 auto; }
+.sw-stmt > span { flex: 1; display: flex; flex-direction: column; gap: 2px; }
+.sw-stmt strong { font-family: var(--sw-serif); font-weight: 600; font-size: 1.02rem; color: #fff; }
+.sw-stmt small { font-size: .74rem; color: #d7b98c; font-weight: 700; }
+.sw-stmt > svg { color: #d7b98c; flex: 0 0 auto; }
