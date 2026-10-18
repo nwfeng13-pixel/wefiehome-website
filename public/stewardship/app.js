@@ -56,13 +56,14 @@
   setWa();
   $$(".lang-btn").forEach(function (b) { b.addEventListener("click", function () { setTimeout(setWa, 0); }); });
 
-  /* share */
+  /* share — PREVIEW_V makes WhatsApp fetch a fresh link preview; bump it when assets/og.jpg changes */
+  var PREVIEW_V = "?v=2";
   var toast = app.querySelector(".sw-toast");
   function say(msg) { toast.textContent = msg; toast.classList.add("is-on"); setTimeout(function () { toast.classList.remove("is-on"); }, 2200); }
   var share = app.querySelector(".sw-share");
   if (share) share.addEventListener("click", function () {
     var zh = root.dataset.lang === "zh";
-    var data = { title: "WefieHome Property Stewardship", text: zh ? "WefieHome 物业照护方案：专业短租管理，结合长期物业照护。" : "WefieHome Property Stewardship: short-term rental management with long-term property care.", url: location.origin + location.pathname };
+    var data = { title: "WefieHome Property Stewardship", text: zh ? "WefieHome 物业照护方案：专业短租管理，结合长期物业照护。" : "WefieHome Property Stewardship: short-term rental management with long-term property care.", url: location.origin + location.pathname + PREVIEW_V };
     if (navigator.share) { navigator.share(data).catch(function () {}); return; }
     var done = function () { say(zh ? "链接已复制" : "Link copied"); };
     if (navigator.clipboard) navigator.clipboard.writeText(data.url).then(done, function () { say(data.url); });
