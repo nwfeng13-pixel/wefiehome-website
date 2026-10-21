@@ -1364,3 +1364,7 @@ html[data-lang] main .rv-card blockquote, html[data-lang] main .rv-section .lead
 @media (max-width: 600px) { .hm-pair { grid-template-columns: 1fr; } }
 .hm-rv-h { margin-top: 34px; }
 .hm-rv { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: 16px; }
+.hm-owner { display: flex; gap: 18px; align-items: center; margin: 26px 0 0; max-width: 620px; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 12px; box-shadow: var(--shadow); }
+.hm-owner img { width: 130px; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 10px; flex: 0 0 130px; }
+.hm-owner strong { display: block; color: var(--deep); margin-bottom: 4px; }
+.hm-owner span { display: block; color: var(--muted); font-size: .95rem; }

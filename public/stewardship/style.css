@@ -228,3 +228,5 @@ html[data-lang="zh"] .sw-home h1 em { font-style: normal; }
 .sw-real-grid a { display: block; border-radius: 14px; overflow: hidden; box-shadow: 0 8px 22px rgba(28,58,53,.12); }
 .sw-real-grid img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
 .sw-real-cap { font-size: .85rem; opacity: .75; margin: 8px 0 0; }
+.sw-ivan-photo { margin: 0 0 16px; }
+.sw-ivan-photo img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; object-position: 50% 22%; border-radius: 18px; box-shadow: 0 14px 30px -16px rgba(28,58,53,.45); }
