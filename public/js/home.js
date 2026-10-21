@@ -37,6 +37,21 @@
     if (chip && chip.scrollIntoView && window.innerWidth < 860) chip.scrollIntoView({ block: "nearest", inline: "center", behavior: reduced ? "auto" : "smooth" });
   });
 
+  selector(document.querySelector(".mg-svc"), ".mg-svc-tab", ".mg-svc-pane");
+
+  /* steps timeline: fill the line as the list scrolls through the viewport */
+  var steps = document.querySelector(".mg-steps");
+  if (steps) {
+    var lis = $$("li", steps);
+    var upd = function () {
+      var r = steps.getBoundingClientRect(), vh = window.innerHeight;
+      var p = Math.max(0, Math.min(1, (vh * 0.62 - r.top) / r.height));
+      steps.style.setProperty("--p", p.toFixed(3));
+      lis.forEach(function (li) { var lr = li.getBoundingClientRect(); li.classList.toggle("is-done", lr.top < vh * 0.62); });
+    };
+    window.addEventListener("scroll", upd, { passive: true }); window.addEventListener("resize", upd); upd();
+  }
+
   /* count-up for the proof bar */
   function countUp(el) {
     var t = el.textContent.trim(), m = t.match(/^([^\d]*)([\d,]*\.?\d+)(.*)$/);
@@ -54,7 +69,7 @@
 
   /* reveals */
   if (!("IntersectionObserver" in window)) return;
-  var groups = [".hp-hero-copy > *", ".hp-hero-fig", ".hp-stat", ".hp-path-tab", ".hp-map-stage", ".hp-map-side", ".hp-change-grid > div", ".hp-steps > li", ".hp-fee", ".hp-ivan-fig", ".hp-ivan-copy > *", ".hp-stay"];
+  var groups = [".hp-hero-copy > *", ".hp-hero-fig", ".hp-stat", ".hp-path-tab", ".hp-map-stage", ".hp-map-side", ".hp-change-grid > div", ".hp-steps > li", ".hp-fee", ".hp-ivan-fig", ".hp-ivan-copy > *", ".hp-stay", ".mg-split > div", ".mg-svc-tab", ".mg-flow-card", ".mg-who", ".mg-chart", ".mg-note", ".mg-link"];
   var els = [];
   groups.forEach(function (sel) {
     $$(sel).forEach(function (el, k) { el.setAttribute("data-hp", ""); el.style.setProperty("--d", Math.min(k, 6) * 0.08 + "s"); els.push(el); });
