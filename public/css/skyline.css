@@ -230,3 +230,4 @@ html[data-lang] main .se-hero p, html[data-lang] main .se-hero .se-sub, html[dat
 @media (max-width: 760px) {
   .se-hero-bg::after { background: linear-gradient(180deg, rgba(14, 29, 28, .6) 0%, rgba(14, 29, 28, .6) 55%, rgba(14, 29, 28, .85) 80%, var(--se-night) 100%); }
 }
+.se-insp > *, .se-chains > *, .se-promises > *, .se-setup > *, .se-loc > *, .se-type > *, .se-terms > * { min-width: 0; }
