@@ -1,0 +1,93 @@
+/* =====================================================================
+   WefieHome — Landed Homes owner guide (/owners/landed-homes/).
+   Public sibling of the private /stewardship/ page: forest green, warm cream,
+   timber accents, Fraunces serif. Re-skins home.css tokens on body.ld-page.
+   ===================================================================== */
+.ld-page {
+  --deep: #1c3a35; --deep-2: #27504a; --brand: #e9d3b0; --brand-soft: #f6eddd; --brand-mid: #c49a68; --line: #e6dccb;
+  --ink: #23302d; --muted: #6a716c; --alt: #f7f2e9;
+  --hp-paper: #fffdf8; --hp-stone: #f7f2e9; --ld-timber: #a0703f; --ld-forest: #1c3a35;
+  background: var(--hp-paper);
+}
+.ld-page main .eyebrow { color: var(--ld-timber); }
+.ld-page main h2 { color: var(--ld-forest); }
+.ld-page .btn-primary { background: var(--ld-forest); border-color: var(--ld-forest); color: #fff; }
+.ld-page .btn-primary:hover { background: var(--deep-2); }
+.ld-page .btn-outline { border-color: var(--ld-forest); color: var(--ld-forest); }
+.ld-page .mr-textcta { color: var(--ld-forest); border-bottom-color: var(--brand-mid); }
+.ld-page .mr-inshort { background: #fbf4e8; border-left-color: var(--ld-timber); }
+
+/* hero: deep forest, cream type, timber accent */
+.ld-hero { background: radial-gradient(circle at 85% 20%, rgba(233, 211, 176, .16), transparent 45%), linear-gradient(150deg, #1c3a35 0%, #17302c 60%, #22443e 100%); color: #f7f2e9; }
+.ld-hero::before { background: radial-gradient(circle, rgba(196, 154, 104, .22), rgba(196, 154, 104, 0) 70%); }
+.ld-hero .breadcrumb, .ld-hero .breadcrumb a { color: rgba(247, 242, 233, .75); }
+.ld-hero .hp-h1-kw { color: var(--brand); }
+.ld-hero .hp-h1-big { color: #fffdf8; }
+.ld-hero .hp-h1-big em { color: var(--brand); background: none; border-bottom: 2px solid rgba(196, 154, 104, .7); }
+.ld-hero .hp-lead { color: rgba(247, 242, 233, .86); }
+.ld-hero .btn-primary { background: var(--brand); border-color: var(--brand); color: var(--ld-forest); }
+.ld-hero .btn-primary:hover { background: #f3e2c6; }
+.ld-hero .btn-outline { border-color: rgba(247, 242, 233, .6); color: #fffdf8; background: transparent; }
+.ld-hero .mg-sign span { color: rgba(247, 242, 233, .75); }
+.ld-hero .hp-chips li { background: rgba(255, 255, 255, .06); border-color: rgba(233, 211, 176, .28); color: #f7f2e9; }
+.ld-hero-fig img { aspect-ratio: 4 / 3.5; object-fit: cover; border-radius: 26px; box-shadow: 0 40px 80px -36px rgba(0, 0, 0, .7), 0 0 0 1px rgba(233, 211, 176, .25); }
+.ld-hero .hp-hero-badge { background: var(--brand); color: var(--ld-forest); }
+.ld-hero .hp-hero-badge strong { color: var(--ld-forest); font-family: var(--hp-serif); font-size: 1.7rem; }
+@media (max-width: 860px) { .ld-hero-fig img { aspect-ratio: 16 / 11; } .ld-hero .breadcrumb { display: none; } }
+
+/* why a house is different */
+.ld-diff { display: grid; grid-template-columns: 1.1fr .9fr; gap: 40px; align-items: center; }
+.ld-diff > * { min-width: 0; }
+.ld-diff-card { background: var(--ld-forest); color: #f7f2e9; border-radius: 26px; padding: 30px 30px 26px; box-shadow: 0 30px 60px -34px rgba(28, 58, 53, .7); }
+.ld-diff-h { margin: 0 0 14px; font-size: .78rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--brand); }
+.ld-diff-card ul { list-style: none; margin: 0; padding: 0; }
+.ld-diff-card li { padding: 12px 0 12px 30px; border-top: 1px solid rgba(233, 211, 176, .18); position: relative; font-weight: 600; }
+.ld-diff-card li::before { content: ""; position: absolute; left: 4px; top: 50%; width: 12px; height: 12px; margin-top: -6px; border-radius: 50%; border: 2px solid var(--brand); }
+.ld-diff-f { margin: 16px 0 0; font-family: var(--hp-serif); font-size: 1.3rem; color: var(--brand); }
+@media (max-width: 860px) { .ld-diff { grid-template-columns: 1fr; gap: 22px; } }
+
+/* walk-the-house drawing (reuses ar-* cutaway) */
+.ld-page .ar-draw path { stroke: var(--ld-forest); }
+.ld-page .ar-draw .ar-rail { stroke: #b9a582; }
+.ld-page .ar-furn rect, .ld-page .ar-furn circle, .ld-page .ar-furn path { fill: #f3e7d6; stroke: #c9b493; stroke-width: 2; }
+.ld-page .ar-furn path { fill: none; }
+.ld-page .ar-lvl { fill: #b9a582; }
+.ld-page .ar-spot { background: var(--ld-forest); color: var(--brand); }
+.ld-page .ar-spot.is-on { background: var(--brand); color: var(--ld-forest); }
+.ld-page .ar-spot:hover, .ld-page .ar-spot:focus-visible, .ld-page .ar-spot.is-on { box-shadow: 0 0 0 8px rgba(233, 211, 176, .75), 0 10px 20px -6px rgba(28, 58, 53, .6); }
+.ld-page .ar-chip.is-on { background: var(--ld-forest); border-color: var(--ld-forest); }
+
+/* Care · Operate · Ready (dark band) */
+.ld-dark { background: linear-gradient(160deg, #1c3a35, #17302c) !important; color: #f7f2e9; }
+.ld-dark h2 { color: #fffdf8 !important; }
+.ld-dark .eyebrow { color: var(--brand) !important; }
+.ld-pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 26px; }
+.ld-pillar { border: 1px solid rgba(233, 211, 176, .22); border-radius: 22px; padding: 26px 24px; background: rgba(255, 255, 255, .04); }
+.ld-pillar-ic { display: inline-grid; place-items: center; width: 46px; height: 46px; border-radius: 50%; background: rgba(233, 211, 176, .14); color: var(--brand); margin-bottom: 14px; }
+.ld-pillar h3 { font-family: var(--hp-serif); font-weight: 600; font-size: 1.5rem; color: #fffdf8; margin: 0 0 6px; }
+.ld-pillar p { margin: 0; color: rgba(247, 242, 233, .8); }
+html[data-lang] main .ld-pillar p, html[data-lang] main .ld-diff-card p, html[data-lang] main .ld-life-cap { text-align: left; hyphens: manual; }
+.ld-life { list-style: none; margin: 34px 0 0; padding: 0; display: flex; justify-content: space-between; position: relative; }
+.ld-life::before { content: ""; position: absolute; left: 4%; right: 4%; top: 9px; height: 2px; background: linear-gradient(90deg, rgba(233, 211, 176, .25), var(--brand)); }
+.ld-life li { position: relative; flex: 1; text-align: center; padding-top: 30px; font-weight: 700; font-size: .95rem; color: #f7f2e9; }
+.ld-life li::before { content: ""; position: absolute; left: 50%; top: 0; width: 20px; height: 20px; margin-left: -10px; border-radius: 50%; background: #1c3a35; border: 2px solid var(--brand); }
+.ld-life li:last-child::before { background: var(--brand); }
+.ld-life-cap { margin: 18px 0 0; color: rgba(247, 242, 233, .75); font-size: .95rem; }
+@media (max-width: 760px) { .ld-pillars { grid-template-columns: 1fr; } .ld-life li { font-size: .82rem; } }
+
+/* Shah Alam facts strip */
+.ld-facts { list-style: none; padding: 0; margin: 22px 0 6px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+.ld-facts li { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 16px 16px 14px; }
+.ld-facts strong { display: block; font-family: var(--hp-serif); font-weight: 600; font-size: 1.3rem; color: var(--ld-forest); }
+.ld-facts span { color: var(--muted); font-size: .88rem; }
+@media (max-width: 900px) { .ld-facts { grid-template-columns: 1fr 1fr; } }
+
+/* fee card, steps, CTA */
+.ld-page .hp-fee { background: var(--ld-forest); }
+.ld-page .hp-fee-n, .ld-page .hp-fee-k, .ld-page .hp-fee a { color: var(--brand); }
+.ld-cta { background: linear-gradient(160deg, #1c3a35, #17302c); }
+.ld-cta .btn-brand { background: var(--brand); color: var(--ld-forest); border-color: var(--brand); }
+.ld-ready { list-style: none; padding: 0; margin: 26px 0 0; display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; }
+.ld-ready li { border: 1px solid rgba(233, 211, 176, .4); color: var(--brand); border-radius: 999px; padding: 6px 16px; font-size: .85rem; font-weight: 700; letter-spacing: .04em; }
+.ld-page .cta-band h2 { color: #fffdf8; }
+.ld-facts strong, .ld-facts strong span { font-family: var(--hp-serif); font-size: 1.25rem; font-weight: 600; line-height: 1.2; }
