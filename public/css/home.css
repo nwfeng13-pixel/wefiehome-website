@@ -474,3 +474,5 @@ html[data-lang] main .pt-steps p, html[data-lang] main .pt-why .lead { text-alig
 @media (max-width: 560px) { .pt-steps { grid-template-columns: 1fr; } }
 .pt-hero .hp-hero-badge strong, .pt-hero .hp-hero-badge strong span { font-family: var(--hp-serif); font-size: 1.35rem; color: var(--brand); }
 html[data-lang] main p.eyebrow { text-align: left; hyphens: manual; }
+.pt-hero .hp-hero-badge { right: auto; left: -16px; }
+@media (max-width: 860px) { .pt-hero .hp-hero-badge { left: 12px; right: auto; } }
