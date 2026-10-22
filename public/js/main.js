@@ -31,7 +31,7 @@
   /* ---------- Highlight current section in menu ---------- */
   var path = location.pathname;
   document.querySelectorAll(".nav-links a[data-section]").forEach(function (a) {
-    if (path.indexOf(a.dataset.section) === 0) a.classList.add("active");
+    if (a.dataset.section.split(" ").some(function (x) { return path.indexOf(x) === 0; })) a.classList.add("active");
   });
 
   /* ---------- Contact links from config.js ---------- */
