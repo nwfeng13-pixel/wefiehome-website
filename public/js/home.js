@@ -38,6 +38,7 @@
   });
 
   selector(document.querySelector(".mg-svc"), ".mg-svc-tab", ".mg-svc-pane");
+  selector(document.querySelector(".ar-cut"), ".ar-spot, .ar-chip", ".ar-pane");
 
   /* steps timeline: fill the line as the list scrolls through the viewport */
   var steps = document.querySelector(".mg-steps");
@@ -69,7 +70,7 @@
 
   /* reveals */
   if (!("IntersectionObserver" in window)) return;
-  var groups = [".hp-hero-copy > *", ".hp-hero-fig", ".hp-stat", ".hp-path-tab", ".hp-map-stage", ".hp-map-side", ".hp-change-grid > div", ".hp-steps > li", ".hp-fee", ".hp-ivan-fig", ".hp-ivan-copy > *", ".hp-stay", ".mg-split > div", ".mg-svc-tab", ".mg-flow-card", ".mg-who", ".mg-chart", ".mg-note", ".mg-link"];
+  var groups = [".hp-hero-copy > *", ".hp-hero-fig", ".hp-stat", ".hp-path-tab", ".hp-map-stage", ".hp-map-side", ".hp-change-grid > div", ".hp-steps > li", ".hp-fee", ".hp-ivan-fig", ".hp-ivan-copy > *", ".hp-stay", ".mg-split > div", ".mg-svc-tab", ".mg-flow-card", ".mg-who", ".mg-chart", ".mg-note", ".mg-link", ".ar-cut-stage", ".ar-cut-side", ".ar-work", ".ar-listing", ".ar-fac figure", ".ar-sit"];
   var els = [];
   groups.forEach(function (sel) {
     $$(sel).forEach(function (el, k) { el.setAttribute("data-hp", ""); el.style.setProperty("--d", Math.min(k, 6) * 0.08 + "s"); els.push(el); });
