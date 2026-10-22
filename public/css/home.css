@@ -446,7 +446,7 @@ html.hp-anim .tr-pano:not(.in) img { transform: scale(1.12); filter: saturate(.6
 @media (max-width: 860px) { .tr-sky { grid-template-columns: 1fr; } }
 
 /* ---------- Partners page (/partners/) ---------- */
-.pt-hero-fig img { aspect-ratio: 4 / 3.4; object-fit: cover; object-position: 50% 30%; }
+.pt-hero-fig img { aspect-ratio: 4 / 3.4; object-fit: cover; object-position: 60% 10%; }
 .pt-hero .hp-hero-badge strong { font-family: var(--hp-serif); font-size: 1.35rem; }
 .pt-who .mg-svc-tabs { grid-template-columns: repeat(3, 1fr); }
 .pt-who .mg-svc-body .btn { margin-top: 10px; }
