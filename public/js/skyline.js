@@ -166,7 +166,7 @@
   /* ---------- 7. WhatsApp chains build as you scroll ---------- */
   var chains = $(".se-chains");
   if (chains) {
-    var tlc = gsap.timeline({ scrollTrigger: { trigger: chains, start: "top 78%", end: "bottom 55%", scrub: 0.5 } });
+    var tlc = gsap.timeline({ scrollTrigger: { trigger: chains, start: "top 88%", end: "top 35%", scrub: 0.4 } });
     tlc.from(".se-chain.is-big .se-node", { opacity: 0, x: -24, duration: 1, stagger: 0.6 })
        .from(".se-chain.is-small .se-node", { opacity: 0, x: -24, duration: 1, stagger: 0.4 }, 0.6)
        .from(".se-node.is-ivan", { scale: 0.6, duration: 0.8, ease: "back.out(2)" }, 1.2)

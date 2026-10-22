@@ -426,3 +426,21 @@ html.hp-anim .ar-cut-stage .ar-furn, html.hp-anim .ar-cut-stage .ar-spot { trans
 @media (max-width: 560px) { .ar-sits { grid-template-columns: 1fr; } }
 
 html[data-lang] main .hp-fee p, html[data-lang] main .hp-steps p, html[data-lang] main .ar-work p, html[data-lang] main .ar-sit p, html[data-lang] main .hp-path-body p { text-align: left; -webkit-hyphens: manual; hyphens: manual; }
+
+/* ---------- Trion owner guide: skyline panorama ---------- */
+.tr-sky { grid-template-columns: 1.5fr 1fr; }
+.tr-pano img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; transform-origin: 40% 45%; }
+html.hp-anim .tr-pano img { transition: transform 2.4s cubic-bezier(.2, .7, .2, 1), filter 2.4s ease; }
+html.hp-anim .tr-pano:not(.in) img { transform: scale(1.12); filter: saturate(.6) brightness(1.08); }
+.tr-pano::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(180deg, rgba(20, 50, 48, .18), transparent 30%, transparent 70%, rgba(20, 50, 48, .25)); }
+.tr-pano .ar-spot { z-index: 2; box-shadow: 0 0 0 4px rgba(255, 255, 255, .85), 0 8px 18px -6px rgba(0, 0, 0, .5); }
+.tr-tag { position: absolute; left: 50%; bottom: calc(100% + 10px); transform: translateX(-50%); white-space: nowrap; font: 700 .76rem "Plus Jakarta Sans", sans-serif; font-style: normal; background: rgba(255, 255, 255, .94); color: var(--deep); padding: 4px 10px; border-radius: 999px; box-shadow: 0 6px 14px -8px rgba(0, 0, 0, .5); pointer-events: none; opacity: .92; }
+.tr-pano .ar-spot.is-on .tr-tag { background: var(--deep); color: #fff; opacity: 1; }
+.tr-pano .ar-spot:nth-of-type(odd) .tr-tag { bottom: auto; top: calc(100% + 10px); }
+.tr-pano .ar-spot:last-of-type .tr-tag { top: auto; bottom: calc(100% + 10px); }
+.tr-unit { cursor: default; }
+.tr-unit:hover { transform: none; box-shadow: none; }
+.tr-badge { display: inline-block; font-size: .82rem; background: var(--brand-soft, #e3f9fa); color: var(--deep); padding: 4px 10px; border-radius: 999px; }
+.ar-go h3 + ul + h3 { margin-top: 14px; }
+@media (max-width: 1000px) { .tr-tag { display: none; } }
+@media (max-width: 860px) { .tr-sky { grid-template-columns: 1fr; } }
