@@ -364,8 +364,11 @@ details p { margin: 12px 0 0; color: var(--muted); }
 /* 3. FAQ plus / minus */
 summary { list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
 summary::-webkit-details-marker { display: none; }
-summary::after { content: "+"; flex: none; width: 28px; height: 28px; border-radius: 50%; background: var(--brand-soft); color: var(--deep); font-size: 1.25rem; font-weight: 700; display: flex; align-items: center; justify-content: center; line-height: 1; }
-details[open] summary::after { content: "−"; background: var(--brand); }
+summary::after { content: ""; flex: none; width: 28px; height: 28px; border-radius: 50%; color: var(--deep);
+  background: linear-gradient(currentColor, currentColor) center / 12px 2px no-repeat, linear-gradient(currentColor, currentColor) center / 2px 12px no-repeat, var(--brand-soft);
+  transition: transform .3s ease, background-size .3s ease, background-color .3s ease; }
+details[open] summary::after { transform: rotate(180deg); background: linear-gradient(currentColor, currentColor) center / 12px 2px no-repeat, linear-gradient(currentColor, currentColor) center / 2px 0 no-repeat, var(--brand); }
+@media (prefers-reduced-motion: reduce) { summary::after { transition: none; } }
 
 /* 4. Equal full-width buttons on phones */
 @media (max-width: 560px) {
