@@ -1288,13 +1288,17 @@ html[data-lang] main .rv-card blockquote, html[data-lang] main .rv-section .lead
 @media (max-width: 900px) { .rv-grid { grid-template-columns: 1fr; gap: 12px; } }
 
 /* auto-scrolling row (showcase pages) */
-.rv-marquee { overflow: hidden; padding: 6px 0 14px; -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); outline: none; }
-.rv-track { display: flex; gap: 18px; width: max-content; animation: rv-scroll 70s linear infinite; }
+/* without JS (or with reduced motion) it is a plain swipeable row; main.js adds .is-live + the hidden duplicate set */
+.rv-marquee { overflow-x: auto; padding: 6px 0 14px; outline: none; scrollbar-width: none; }
+.rv-marquee::-webkit-scrollbar { display: none; }
+.rv-track { display: flex; gap: 18px; width: max-content; padding: 0 20px; }
+.rv-marquee.is-live { overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); }
+.rv-marquee.is-live .rv-track { padding: 0; animation: rv-scroll 70s linear infinite; }
 .rv-dup { display: contents; }
 .rv-marquee .rv-card { width: 340px; flex: 0 0 340px; }
 .rv-marquee:hover .rv-track, .rv-marquee:focus-within .rv-track, .rv-marquee.is-paused .rv-track { animation-play-state: paused; }
 @keyframes rv-scroll { from { transform: translateX(0); } to { transform: translateX(calc(-50% - 9px)); } }
-@media (max-width: 700px) { .rv-marquee .rv-card { width: 280px; flex-basis: 280px; } .rv-track { animation-duration: 55s; } }
+@media (max-width: 700px) { .rv-marquee .rv-card { width: 280px; flex-basis: 280px; } .rv-marquee.is-live .rv-track { animation-duration: 55s; } }
 @media (prefers-reduced-motion: reduce) {
   .rv-marquee { overflow-x: auto; -webkit-mask-image: none; mask-image: none; }
   .rv-track { animation: none; padding: 0 20px; }

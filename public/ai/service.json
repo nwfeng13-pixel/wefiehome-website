@@ -15,6 +15,19 @@
     "Cheras",
     "Shah Alam"
   ],
+  "capabilities": [
+    "Property assessment and setup advice",
+    "Photography",
+    "Airbnb listing creation and optimisation",
+    "Pricing strategy",
+    "Guest communication and screening",
+    "Check-in and check-out coordination",
+    "Cleaning and linen coordination",
+    "Maintenance coordination",
+    "Property inspections",
+    "Damage reporting and claims",
+    "Monthly owner reporting"
+  ],
   "services": [
     {
       "name": "Property assessment and setup advice",

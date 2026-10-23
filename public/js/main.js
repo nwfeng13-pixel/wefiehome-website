@@ -91,8 +91,16 @@
   });
 
   /* ---------- Guest reviews row: pause the auto-scroll while touched ---------- */
+  var rvReduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
   document.querySelectorAll(".rv-marquee").forEach(function (m) {
-    var tm;
+    var tm, track = m.querySelector(".rv-track");
+    /* the looping copy is built here (not in the HTML) so crawlers see each review once */
+    if (track && !rvReduce && !track.querySelector(".rv-dup")) {
+      var dup = document.createElement("div");
+      dup.className = "rv-dup"; dup.setAttribute("aria-hidden", "true");
+      [].slice.call(track.children).forEach(function (c) { var k = c.cloneNode(true); k.setAttribute("tabindex", "-1"); dup.appendChild(k); });
+      track.appendChild(dup); m.classList.add("is-live");
+    }
     m.addEventListener("touchstart", function () { clearTimeout(tm); m.classList.add("is-paused"); }, { passive: true });
     m.addEventListener("touchend", function () { tm = setTimeout(function () { m.classList.remove("is-paused"); }, 2500); }, { passive: true });
   });
