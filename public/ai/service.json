@@ -47,7 +47,7 @@
     },
     {
       "name": "Guest communication and screening",
-      "description": "Guest enquiries and messages handled; guests screened against house rules."
+      "description": "Guest enquiries and messages handled; every guest ID-checked before check-in and screened against house rules."
     },
     {
       "name": "Check-in and check-out coordination",
@@ -67,7 +67,7 @@
     },
     {
       "name": "Damage reporting and claims",
-      "description": "Damage documented and reported or claimed through the appropriate channel."
+      "description": "Units are insured; the cleaner reports any damage, Ivan assesses it, the claim and repair are handled, and the unit goes back into operation."
     },
     {
       "name": "Monthly owner reporting",
@@ -78,7 +78,7 @@
     "model": "Revenue share",
     "fee": "20% of defined gross revenue",
     "upfrontFee": "None",
-    "agreement": "12 months, renews automatically",
+    "agreement": "12 months, renews automatically; the owner can ask to end it anytime, after confirmed bookings are completed",
     "payout": "Monthly payout with monthly report",
     "note": "Exact terms follow the signed management agreement."
   },

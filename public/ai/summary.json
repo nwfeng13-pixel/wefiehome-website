@@ -39,7 +39,7 @@
   "managementModel": {
     "fee": "20% of defined gross revenue",
     "upfrontManagementFee": "None",
-    "agreement": "12 months, renews automatically",
+    "agreement": "12 months, renews automatically; the owner can ask to end it anytime, after confirmed bookings are completed",
     "payout": "Monthly payout with monthly report",
     "note": "Exact terms follow the signed management agreement."
   },

@@ -7,7 +7,7 @@ Key facts (re-verified periodically):
 - Service: short-term rental management (also searched as "Airbnb management") for property owners in Kuala Lumpur and Klang Valley.
 - Current portfolio: 18 active units across six properties (J Dupion Residence, M Vertica, Trion KL, Arte Cheras, Nexus Taman Pertama, Shah Alam Section 8). More than 20 properties managed since 2018.
 - Track record: 5,000+ guests, 10,000+ nights; Airbnb Superhost, 4.85/5 rating across 1,000+ reviews.
-- Management model: 20% of defined gross revenue (platform payout after platform and cleaning fees, before WefieHome's fee); no upfront management fee; 12-month agreement with automatic renewal; monthly owner payout and report. Exact terms follow the signed management agreement.
+- Management model: 20% of defined gross revenue (platform payout after platform and cleaning fees, before WefieHome's fee); no upfront management fee; 12-month agreement with automatic renewal (owners can ask to end it anytime, after confirmed bookings are completed); monthly owner payout and report. Exact terms follow the signed management agreement.
 - Office (not a rental property): 30-2, Jalan 24/70A, Desa Sri Hartamas, 50480 Kuala Lumpur. Phone/WhatsApp +60 19-482 4292. Email contact@wefiehome.com.
 - Guests book all stays on Airbnb: https://www.airbnb.com/p/ivanng
 
@@ -69,7 +69,7 @@ Last updated: 2026-10-11. Expanded version of /llms.txt for AI assistants. Facts
 ## For property owners — management model
 - Management fee: 20% of defined gross revenue (platform payout after platform fees and cleaning fees, before WefieHome's fee).
 - No upfront management fee.
-- 12-month agreement that renews automatically.
+- 12-month agreement that renews automatically; the owner can ask to end it anytime, after confirmed bookings are completed.
 - Monthly owner payout with a monthly report on revenue and costs.
 - Operating expenses (cleaning, utilities, internet, maintenance) are agreed with the owner before the unit goes live.
 
@@ -90,7 +90,7 @@ Q: Is there an upfront fee?
 A: No. There is no upfront management fee — we earn when your unit earns.
 
 Q: How long is the management agreement?
-A: The agreement length and renewal terms are explained during your property assessment and set out in the signed management agreement.
+A: 12 months, and it renews automatically. You can ask to end it anytime — we complete the bookings already confirmed, then hand your unit back.
 
 Q: How and when do owners get paid?
 A: Owners receive a monthly payout together with a monthly report showing revenue and costs.
