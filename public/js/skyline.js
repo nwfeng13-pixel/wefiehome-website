@@ -93,6 +93,17 @@
     } catch (err) { smoother = null; }
   }
 
+  /* pinned sections stop below the header + section menu, so their headings stay visible */
+  var topOff = function () {
+    var h = document.querySelector(".site-header"), j = document.querySelector(".se-jump");
+    var off = (h ? h.offsetHeight : 0) + (j ? j.offsetHeight : 0);
+    root.style.setProperty("--se-top", off + "px");
+    return off;
+  };
+  topOff();
+  window.addEventListener("resize", topOff);
+  var pinStart = function () { return "top " + topOff() + "px"; };
+
   var mm = gsap.matchMedia();
   var BIG = "(min-width: 761px)", SMALL = "(max-width: 760px)";
 
@@ -145,7 +156,7 @@
       gsap.set(grid, { transformOrigin: origin() });
       var tl = gsap.timeline({
         defaults: { ease: "none" },
-        scrollTrigger: { trigger: ".se-booking", pin: ".se-pin", start: "top top", end: ctx.conditions.small ? "+=130%" : "+=200%", scrub: 0.6, anticipatePin: 1, invalidateOnRefresh: true,
+        scrollTrigger: { trigger: ".se-booking", pin: ".se-pin", start: pinStart, end: ctx.conditions.small ? "+=130%" : "+=200%", scrub: 0.6, anticipatePin: 1, invalidateOnRefresh: true,
                          onRefresh: function () { gsap.set(grid, { transformOrigin: origin() }); } }
       });
       tl.fromTo(grid, { scale: ctx.conditions.small ? 2.6 : 3.4 }, { scale: 1, duration: 1.2, ease: "power2.inOut" })
@@ -190,7 +201,7 @@
       root.classList.add("se-hscroll");
       var dist = function () { return Math.max(0, track.scrollWidth - document.documentElement.clientWidth + 48); };
       gsap.to(track, { x: function () { return -dist(); }, ease: "none",
-        scrollTrigger: { trigger: ".se-timeline", pin: ".se-tl-pin", start: "top top", end: function () { return "+=" + dist(); }, scrub: 0.6, invalidateOnRefresh: true, anticipatePin: 1 } });
+        scrollTrigger: { trigger: ".se-timeline", pin: ".se-tl-pin", start: pinStart, end: function () { return "+=" + dist(); }, scrub: 0.6, invalidateOnRefresh: true, anticipatePin: 1 } });
       return function () { root.classList.remove("se-hscroll"); };
     });
     mm.add("(max-width: 900px)", function () {

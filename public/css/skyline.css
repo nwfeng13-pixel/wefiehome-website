@@ -266,3 +266,7 @@ html[data-lang] main .se-fears li, html[data-lang] main .se-happy p, html[data-l
 }
 @media (max-width:1180px) and (min-width:1101px){ .nav-links { gap: 12px; } }
 @media (max-width:420px){ html[data-lang="zh"] .se-h1-b { font-size: min(1.9rem, 8.4vw); } }
+/* pinned sections sit below the header + section menu (--se-top set by skyline.js) */
+html.se-booking-anim .se-pin { height: calc(100vh - var(--se-top, 0px)); height: calc(100svh - var(--se-top, 0px)); padding: 22px 0 18px; }
+html.se-booking-anim .se-booking-head h2 { font-size: clamp(1.6rem, 3vw, 2.4rem); margin-bottom: 6px; }
+html.se-hscroll .se-tl-pin { height: calc(100vh - var(--se-top, 0px)); padding: 26px 0 30px; }
