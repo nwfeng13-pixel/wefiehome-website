@@ -111,3 +111,20 @@ html[data-lang] .mrx-page main .mr-hero p, html[data-lang] .mrx-page main .mrx-q
   .mrx-why-head .mrx-counter { justify-self: start; }
   .mrx-page #why-12 .mr-why-grid { grid-template-columns: 1fr; gap: 24px; }
 }
+
+/* ---------- Owner-first sections (24 Oct 2026): worries, choosing, happy chain ---------- */
+.mrx-fears .mr-wg-head h3 { font-size: 1.08rem; font-style: italic; }
+.mrx-fears .mr-work li { font-size: .97rem; }
+.mrx-choose { display: grid; grid-template-columns: .95fr 1.05fr; gap: 40px; align-items: center; }
+.mrx-choose > * { min-width: 0; }
+.mrx-choose-close { margin: 18px 0 0; font-weight: 700; color: var(--deep); font-size: 1.05rem; }
+.mrx-certain { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+.mrx-certain li { display: grid; grid-template-columns: 44px 1fr; gap: 14px; align-items: center; background: var(--white); border-radius: 14px; padding: 14px 18px; box-shadow: var(--shadow); }
+.mrx-certain strong { color: var(--deep); }
+.mrx-happy { margin: 26px 0 8px; background: var(--white); border-radius: 18px; padding: 18px 22px; box-shadow: var(--shadow); }
+.mrx-happy-chain { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin: 0 0 6px; font-weight: 800; color: var(--deep); font-size: 1.08rem; }
+.mrx-happy-chain i { font-style: normal; color: var(--deep-2); }
+.mrx-happy p:last-child { margin: 0; color: var(--muted); }
+.mrx-check2 { margin-top: 14px; }
+html[data-lang] main .mrx-certain div, html[data-lang] main .mrx-happy p, html[data-lang] main .mrx-check2 p { text-align: left; hyphens: manual; }
+@media (max-width: 860px) { .mrx-choose { grid-template-columns: 1fr; gap: 20px; } .mrx-certain li { padding: 12px 14px; } }
