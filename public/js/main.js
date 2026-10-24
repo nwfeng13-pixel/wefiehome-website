@@ -6,7 +6,7 @@
   /* ---------- Language switch (EN / 中文) ---------- */
   function setLang(lang) {
     root.dataset.lang = lang;
-    root.lang = lang === "zh" ? "zh-Hans" : "en";
+    root.lang = lang === "zh" ? (root.dataset.script === "hant" ? "zh-Hant" : "zh-Hans") : "en";
     try { localStorage.setItem("wefie-lang", lang); } catch (e) {}
     document.querySelectorAll(".lang-btn").forEach(function (b) {
       b.textContent = lang === "zh" ? "EN" : "中文";
